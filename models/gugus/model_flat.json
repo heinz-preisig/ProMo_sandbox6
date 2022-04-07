@@ -1,0 +1,349 @@
+{
+  "nodes": {
+    "1": {
+      "name": "sum",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "constant|AE",
+      "tokens": {
+        "signal": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "2": {
+      "name": "int e dt",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "dynamic|ODE",
+      "tokens": {
+        "signal": []
+      },
+      "conversions": {},
+      "injected_typed_tokens": {}
+    },
+    "3": {
+      "name": "setpoint",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "constant|AE",
+      "tokens": {
+        "signal": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "4": {
+      "name": "multiply",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "constant|AE",
+      "tokens": {
+        "signal": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "5": {
+      "name": "sum",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "constant|AE",
+      "tokens": {
+        "signal": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "6": {
+      "name": "- measurement",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "constant|AE",
+      "tokens": {
+        "signal": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "7": {
+      "name": "gain",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "constant|AE",
+      "tokens": {
+        "signal": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "8": {
+      "name": "integral time",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "constant|AE",
+      "tokens": {
+        "signal": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "9": {
+      "name": "multiply",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "constant|AE",
+      "tokens": {
+        "signal": []
+      },
+      "injected_typed_tokens": {}
+    }
+  },
+  "arcs": {
+    "0": {
+      "name": "3 | 1",
+      "source": 3,
+      "sink": 1,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional"
+    },
+    "1": {
+      "name": "1 | 4",
+      "source": 1,
+      "sink": 4,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional"
+    },
+    "2": {
+      "name": "1 | 2",
+      "source": 1,
+      "sink": 2,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional"
+    },
+    "3": {
+      "name": "4 | 5",
+      "source": 4,
+      "sink": 5,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional"
+    },
+    "4": {
+      "name": "6 | 1",
+      "source": 6,
+      "sink": 1,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional"
+    },
+    "5": {
+      "name": "7 | 4",
+      "source": 7,
+      "sink": 4,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional"
+    },
+    "6": {
+      "name": "2 | 9",
+      "source": 2,
+      "sink": 9,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional"
+    },
+    "7": {
+      "name": "8 | 9",
+      "source": 8,
+      "sink": 9,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional"
+    },
+    "8": {
+      "name": "9 | 5",
+      "source": 9,
+      "sink": 5,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "A-control",
+      "mechanism": "link",
+      "nature": "unidirectional"
+    }
+  },
+  "named_networks": {
+    "network__named_network": {
+      "control": [
+        "A-control"
+      ],
+      "gas": [
+        "A-gas"
+      ],
+      "liquid": [
+        "A-liquid"
+      ],
+      "material": [
+        "A-material"
+      ],
+      "reactions": [
+        "A-reactions"
+      ],
+      "solid": [
+        "A-solid"
+      ]
+    },
+    "A-control": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-gas": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-liquid": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-material": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-reactions": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-solid": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    }
+  },
+  "token_domains": {
+    "energy": {},
+    "mass": {},
+    "signal": {
+      "0": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  },
+  "typed_token_domains": {
+    "signal": {
+      "0": {}
+    }
+  },
+  "token_incidence_matrix": {
+    "0": {
+      "signal": {
+        "3": [
+          0
+        ],
+        "1": [
+          0,
+          1,
+          2,
+          4
+        ],
+        "4": [
+          1,
+          3,
+          5
+        ],
+        "2": [
+          2,
+          6
+        ],
+        "5": [
+          3,
+          8
+        ],
+        "6": [
+          4
+        ],
+        "7": [
+          5
+        ],
+        "9": [
+          6,
+          7,
+          8
+        ],
+        "8": [
+          7
+        ]
+      }
+    }
+  },
+  "typed_token_incidence_matrix": {
+    "signal": {
+      "0": {}
+    }
+  },
+  "typed_token_lists": {
+    "signal": {
+      "0": []
+    }
+  }
+}

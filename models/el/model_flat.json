@@ -1,0 +1,504 @@
+{
+  "nodes": {
+    "1": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "event|lumped",
+      "tokens": {
+        "energy": []
+      },
+      "conversions": {},
+      "energy": []
+    },
+    "2": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "B-solid",
+      "class": "node_simple",
+      "type": "event|lumped",
+      "tokens": {
+        "energy": []
+      },
+      "conversions": {},
+      "energy": []
+    },
+    "3": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "C-solid",
+      "class": "node_simple",
+      "type": "event|lumped",
+      "tokens": {
+        "energy": []
+      },
+      "conversions": {},
+      "energy": []
+    },
+    "4": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "negative",
+      "class": "node_simple",
+      "type": "constant|infinity",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {},
+      "energy": []
+    },
+    "5": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "positive",
+      "class": "node_simple",
+      "type": "constant|infinity",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {},
+      "energy": []
+    },
+    "6": {
+      "name": "default",
+      "network": "liquid",
+      "named_network": "A-liquid",
+      "class": "node_simple",
+      "type": "event|lumped",
+      "tokens": {
+        "energy": []
+      },
+      "conversions": {},
+      "energy": []
+    },
+    "7": {
+      "name": "default",
+      "network": "solid >>> solid",
+      "named_network": "negative >>> C-solid",
+      "class": "node_intraface",
+      "type": "intra",
+      "tokens": {
+        "energy": []
+      },
+      "tokens_right": {
+        "energy": []
+      },
+      "tokens_left": {
+        "energy": []
+      },
+      "transfer_constraints": {
+        "energy": []
+      },
+      "energy": []
+    },
+    "8": {
+      "name": "default",
+      "network": "liquid >>> solid",
+      "named_network": "C-solid >>> A-liquid",
+      "class": "node_intraface",
+      "type": "intra",
+      "tokens": {
+        "energy": []
+      },
+      "tokens_right": {
+        "energy": []
+      },
+      "tokens_left": {
+        "energy": []
+      },
+      "transfer_constraints": {
+        "energy": []
+      },
+      "energy": []
+    },
+    "9": {
+      "name": "default",
+      "network": "liquid >>> solid",
+      "named_network": "A-liquid >>> B-solid",
+      "class": "node_intraface",
+      "type": "intra",
+      "tokens": {
+        "energy": []
+      },
+      "tokens_right": {
+        "energy": []
+      },
+      "tokens_left": {
+        "energy": []
+      },
+      "transfer_constraints": {
+        "energy": []
+      },
+      "energy": []
+    },
+    "10": {
+      "name": "default",
+      "network": "solid >>> solid",
+      "named_network": "B-solid >>> A-solid",
+      "class": "node_intraface",
+      "type": "intra",
+      "tokens": {
+        "energy": []
+      },
+      "tokens_right": {
+        "energy": []
+      },
+      "tokens_left": {
+        "energy": []
+      },
+      "transfer_constraints": {
+        "energy": []
+      },
+      "energy": []
+    },
+    "11": {
+      "name": "default",
+      "network": "control",
+      "named_network": "setpoint",
+      "class": "node_simple",
+      "type": "constant|AE",
+      "tokens": {
+        "signal": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "12": {
+      "name": "default",
+      "network": "control",
+      "named_network": "logics",
+      "class": "node_simple",
+      "type": "event|AE",
+      "tokens": {
+        "signal": []
+      },
+      "conversions": {}
+    },
+    "13": {
+      "name": "default",
+      "network": "control >>> control",
+      "named_network": "setpoint >>> logics",
+      "class": "node_intraface",
+      "type": "intra",
+      "tokens": {
+        "signal": []
+      },
+      "tokens_right": {
+        "signal": []
+      },
+      "tokens_left": {
+        "signal": []
+      },
+      "transfer_constraints": {
+        "signal": []
+      }
+    },
+    "14": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "event|lumped",
+      "tokens": {},
+      "conversions": {}
+    }
+  },
+  "arcs": {
+    "0": {
+      "name": "4 | 8",
+      "source": 4,
+      "sink": 7,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "negative",
+      "mechanism": "work",
+      "nature": "lumped"
+    },
+    "1": {
+      "name": "8 | 3",
+      "source": 7,
+      "sink": 3,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "C-solid",
+      "mechanism": "work",
+      "nature": "lumped"
+    },
+    "2": {
+      "name": "3 | 9",
+      "source": 3,
+      "sink": 8,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "C-solid",
+      "mechanism": "work",
+      "nature": "lumped"
+    },
+    "3": {
+      "name": "9 | 7",
+      "source": 8,
+      "sink": 6,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "liquid",
+      "named_network": "A-liquid",
+      "mechanism": "work",
+      "nature": "lumped"
+    },
+    "4": {
+      "name": "6 | 9",
+      "source": 6,
+      "sink": 9,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "liquid",
+      "named_network": "A-liquid",
+      "mechanism": "work",
+      "nature": "lumped"
+    },
+    "5": {
+      "name": "9 | 2",
+      "source": 9,
+      "sink": 2,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "B-solid",
+      "mechanism": "work",
+      "nature": "lumped"
+    },
+    "6": {
+      "name": "2 | 10",
+      "source": 2,
+      "sink": 10,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "B-solid",
+      "mechanism": "work",
+      "nature": "lumped"
+    },
+    "7": {
+      "name": "10 | 1",
+      "source": 10,
+      "sink": 1,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "work",
+      "nature": "lumped"
+    },
+    "8": {
+      "name": "12 | 14",
+      "source": 11,
+      "sink": 13,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "setpoint",
+      "mechanism": "link",
+      "nature": "unidirectional"
+    },
+    "9": {
+      "name": "14 | 13",
+      "source": 13,
+      "sink": 12,
+      "token": "signal",
+      "typed_tokens": [],
+      "network": "control",
+      "named_network": "logics",
+      "mechanism": "link",
+      "nature": "unidirectional"
+    }
+  },
+  "named_networks": {
+    "network__named_network": {
+      "control": [
+        "setpoint",
+        "logics"
+      ],
+      "gas": [
+        "A-gas"
+      ],
+      "liquid": [
+        "A-liquid"
+      ],
+      "material": [
+        "A-material"
+      ],
+      "reactions": [
+        "A-reactions"
+      ],
+      "solid": [
+        "A-solid",
+        "B-solid",
+        "C-solid",
+        "negative",
+        "positive"
+      ]
+    },
+    "A-control": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-gas": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-liquid": {
+      "colour": [
+        114,
+        159,
+        207,
+        255
+      ]
+    },
+    "A-material": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-reactions": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-solid": {
+      "colour": [
+        245,
+        121,
+        0,
+        255
+      ]
+    },
+    "B-solid": {
+      "colour": [
+        164,
+        0,
+        0,
+        255
+      ]
+    },
+    "C-solid": {
+      "colour": [
+        52,
+        101,
+        164,
+        255
+      ]
+    },
+    "negative": {
+      "colour": [
+        92,
+        53,
+        102,
+        255
+      ]
+    },
+    "positive": {
+      "colour": [
+        239,
+        41,
+        41,
+        255
+      ]
+    },
+    "setpoint": {
+      "colour": [
+        252,
+        233,
+        79,
+        255
+      ]
+    },
+    "logics": {
+      "colour": [
+        196,
+        160,
+        0,
+        255
+      ]
+    }
+  },
+  "token_domains": {
+    "energy": {
+      "0": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    },
+    "mass": {},
+    "signal": {
+      "0": [
+        11,
+        12,
+        13
+      ]
+    }
+  },
+  "typed_token_domains": {
+    "energy": {
+      "0": {}
+    },
+    "signal": {
+      "0": {}
+    }
+  },
+  "token_incidence_matrix": {
+    "0": {
+      "signal": {
+        "11": [
+          8
+        ],
+        "13": [
+          8,
+          9
+        ],
+        "12": [
+          9
+        ]
+      }
+    }
+  },
+  "typed_token_incidence_matrix": {
+    "energy": {
+      "0": {}
+    },
+    "signal": {
+      "0": {}
+    }
+  },
+  "typed_token_lists": {
+    "energy": {
+      "0": []
+    },
+    "signal": {
+      "0": []
+    }
+  }
+}
