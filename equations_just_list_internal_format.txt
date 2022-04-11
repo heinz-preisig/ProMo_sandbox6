@@ -105,3 +105,14 @@
 150 :: y =  Cx | N | x + D_A . e
 153 :: y =  D_A . e
 154 :: density =  Instantiate ( density , value )
+155 :: u =  one . y
+156 :: Ue =  inv ( C ) . U
+157 :: fC =  P_N_A | N | TotalDiff ( C , t )
+158 :: kC =  D | N | inv ( Ue ) . fC
+159 :: fC =  kC . D | N | Ue
+160 :: kC =  Instantiate ( kC , value )
+161 :: cnorm =  ones_NS | S in N & S | c
+162 :: x_frac =  inv ( cnorm ) : c
+164 :: conductivity =  inv ( inv ( kC ) . ( P_NS_A | N & S | ln ( x_frac ) ) )
+165 :: fC =  conductivity . ( D | N | Ue )
+166 :: conductivity =  Instantiate ( conductivity , value )

@@ -640,5 +640,71 @@
     "lhs": "density",
     "network": "material",
     "rhs": "np.ones(np.shape(density)), value"
+  },
+  "155": {
+    "variable_ID": 158,
+    "lhs": "u",
+    "network": "control",
+    "rhs": "np.multiply(one, y)"
+  },
+  "156": {
+    "variable_ID": 160,
+    "lhs": "Ue",
+    "network": "physical",
+    "rhs": "np.multiply(np.reciprocal(C), U)"
+  },
+  "157": {
+    "variable_ID": 162,
+    "lhs": "fC",
+    "network": "macroscopic",
+    "rhs": "np.dot(np.transpose(P_N_A), TotalDiff(C, t))"
+  },
+  "158": {
+    "variable_ID": 163,
+    "lhs": "kC",
+    "network": "material",
+    "rhs": "np.multiply(np.dot(np.transpose(D), np.reciprocal(Ue)), fC)"
+  },
+  "159": {
+    "variable_ID": 162,
+    "lhs": "fC",
+    "network": "macroscopic",
+    "rhs": "np.dot(np.transpose(np.multiply(np.transpose(kC), D)), Ue)"
+  },
+  "160": {
+    "variable_ID": 163,
+    "lhs": "kC",
+    "network": "material",
+    "rhs": "np.ones(np.shape(kC)), value"
+  },
+  "161": {
+    "variable_ID": 165,
+    "lhs": "cnorm",
+    "network": "macroscopic",
+    "rhs": "blockReduce(ones_NS, S, N_x_S, c)"
+  },
+  "162": {
+    "variable_ID": 166,
+    "lhs": "x_frac",
+    "network": "macroscopic",
+    "rhs": "khatriRao(np.reciprocal(cnorm), [N], c, [N_x_S])"
+  },
+  "164": {
+    "variable_ID": 169,
+    "lhs": "conductivity",
+    "network": "macroscopic",
+    "rhs": "np.reciprocal(np.multiply(np.reciprocal(kC), (np.dot(P_NS_A, np.log(x_frac)))))"
+  },
+  "165": {
+    "variable_ID": 162,
+    "lhs": "fC",
+    "network": "macroscopic",
+    "rhs": "np.multiply(conductivity, (np.dot(np.transpose(D), Ue)))"
+  },
+  "166": {
+    "variable_ID": 169,
+    "lhs": "conductivity",
+    "network": "macroscopic",
+    "rhs": "np.ones(np.shape(conductivity)), value"
   }
 }

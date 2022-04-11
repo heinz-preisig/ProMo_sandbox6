@@ -1202,7 +1202,7 @@
       "units": "[-1, 0, 0, 0, 0, 0, 0, 0]"
     },
     "145": {
-      "aliases": "{'global_ID': ' V_145', 'python': 'T_ref', 'cpp': 'T_ref', 'matlab': 'T_ref', 'latex': 'T_ref', 'internal_code': 'T_ref'}",
+      "aliases": "{'global_ID': ' V_145', 'python': 'T_ref', 'cpp': 'T_ref', 'matlab': 'T_ref', 'latex': 'T_{ref}', 'internal_code': 'T_ref'}",
       "doc": "refernce temperature",
       "equations": "{117: {'rhs': ' O_11 D_0 V_16 D_7 V_1 D_1', 'type': 'generic', 'doc': 'refernce temperature', 'network': 'macroscopic', 'incidence_list': ['1', '16']}}",
       "index_structures": "[1]",
@@ -1262,7 +1262,7 @@
       "units": "[-2, 2, 0, 1, 0, 0, 0, 0]"
     },
     "152": {
-      "aliases": "{'global_ID': ' V_152', 'python': 'intensities', 'cpp': 'intensities', 'matlab': 'intensities', 'latex': 'intensities', 'internal_code': 'intensities'}",
+      "aliases": "{'global_ID': ' V_152', 'python': 'intensities', 'cpp': 'intensities', 'matlab': 'intensities', 'latex': '\\\\psi', 'internal_code': 'intensities'}",
       "doc": "collected intensities",
       "equations": "{126: {'rhs': ' F_19 D_0 V_15 D_7 V_16 D_7 V_45 D_7 V_108 D_1', 'type': 'generic', 'doc': 'collected intensities', 'network': 'macroscopic', 'incidence_list': ['108', '15', '16', '45']}}",
       "index_structures": "[]",
@@ -1308,6 +1308,138 @@
       "tokens": "[]",
       "type": "algebraic",
       "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "158": {
+      "aliases": "{'global_ID': ' V_158', 'python': 'u', 'cpp': 'u', 'matlab': 'u', 'latex': 'u', 'internal_code': 'u'}",
+      "doc": "data link",
+      "equations": "{155: {'rhs': ' V_3 O_4 V_155', 'type': 'generic', 'doc': 'data link', 'network': 'control', 'incidence_list': ['155', '3']}}",
+      "index_structures": "[2]",
+      "label": "u",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "input",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "159": {
+      "aliases": "{'global_ID': ' V_159', 'python': 'C', 'cpp': 'C', 'matlab': 'C', 'latex': 'C', 'internal_code': 'C'}",
+      "doc": "charge",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "C",
+      "network": "physical",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "state",
+      "units": "[1, 0, 0, 0, 0, 1, 0, 0]"
+    },
+    "160": {
+      "aliases": "{'global_ID': ' V_160', 'python': 'Ue', 'cpp': 'Ue', 'matlab': 'Ue', 'latex': 'Ue', 'internal_code': 'Ue'}",
+      "doc": "voltage",
+      "equations": "{156: {'rhs': ' F_15 D_0 V_159 D_1 O_4 V_11', 'type': 'generic', 'doc': 'voltage', 'network': 'physical', 'incidence_list': ['11', '159']}}",
+      "index_structures": "[1]",
+      "label": "Ue",
+      "network": "physical",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "effort",
+      "units": "[-3, 2, 0, 1, 0, -1, 0, 0]"
+    },
+    "161": {
+      "aliases": "{'global_ID': ' V_161', 'python': 'P_N_A', 'cpp': 'P_N_A', 'matlab': 'P_N_A', 'latex': 'P', 'internal_code': 'P_N_A'}",
+      "doc": "project node to arc for material properties",
+      "equations": "{}",
+      "index_structures": "[1, 2]",
+      "label": "P_N_A",
+      "network": "physical",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "projection",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "162": {
+      "aliases": "{'global_ID': ' V_162', 'python': 'fC', 'cpp': 'fC', 'matlab': 'fC', 'latex': '\\\\hat{I}', 'internal_code': 'fC'}",
+      "doc": "current definition",
+      "equations": "{157: {'rhs': ' V_161  O_5  I_1 O_5  O_8 D_0 V_159 D_7 V_6 D_1', 'type': 'generic', 'doc': 'current definition', 'network': 'macroscopic', 'incidence_list': ['159', '161', '6']}, 159: {'rhs': ' V_163 O_4 V_127  O_5  I_1 O_5  V_160', 'type': 'generic', 'doc': 'current definition', 'network': 'macroscopic', 'incidence_list': ['127', '160', '163']}, 165: {'rhs': ' V_169 O_4 D_0 V_127  O_5  I_1 O_5  V_160 D_1', 'type': 'generic', 'doc': 'current definition', 'network': 'macroscopic', 'incidence_list': ['127', '160', '169']}}",
+      "index_structures": "[2]",
+      "label": "fC",
+      "network": "macroscopic",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "transport",
+      "units": "[0, 0, 0, 0, 0, 1, 0, 0]"
+    },
+    "163": {
+      "aliases": "{'global_ID': ' V_163', 'python': 'kC', 'cpp': 'kC', 'matlab': 'kC', 'latex': 'k_{C}', 'internal_code': 'kC'}",
+      "doc": "electrical conductivity",
+      "equations": "{158: {'rhs': ' V_127  O_5  I_1 O_5  F_15 D_0 V_160 D_1 O_4 V_162', 'type': 'generic', 'doc': 'electrical conductivity', 'network': 'material', 'incidence_list': ['127', '160', '162']}, 160: {'rhs': ' O_11 D_0 V_163 D_7 V_1 D_1', 'type': 'generic', 'doc': 'electrical conductivity', 'network': 'material', 'incidence_list': ['1', '163']}}",
+      "index_structures": "[2]",
+      "label": "kC",
+      "network": "material",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "property",
+      "units": "[3, -2, 0, -1, 0, 2, 0, 0]"
+    },
+    "164": {
+      "aliases": "{'global_ID': ' V_164', 'python': 'ones_NS', 'cpp': 'ones_NS', 'matlab': 'ones_NS', 'latex': '1', 'internal_code': 'ones_NS'}",
+      "doc": "block vector of ones",
+      "equations": "{}",
+      "index_structures": "[5]",
+      "label": "ones_NS",
+      "network": "macroscopic",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "165": {
+      "aliases": "{'global_ID': ' V_165', 'python': 'cnorm', 'cpp': 'cnorm', 'matlab': 'cnorm', 'latex': 'c_{norm}', 'internal_code': 'cnorm'}",
+      "doc": "moles per node",
+      "equations": "{161: {'rhs': ' V_164 O_5 I_3 O_14 I_5 O_5 V_108', 'type': 'generic', 'doc': 'moles per node', 'network': 'macroscopic', 'incidence_list': ['108', '164']}}",
+      "index_structures": "[1]",
+      "label": "cnorm",
+      "network": "macroscopic",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "secondaryState",
+      "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
+    },
+    "166": {
+      "aliases": "{'global_ID': ' V_166', 'python': 'x_frac', 'cpp': 'x_frac', 'matlab': 'x_frac', 'latex': '\\\\xi', 'internal_code': 'x_frac'}",
+      "doc": "mole fractions ",
+      "equations": "{162: {'rhs': ' F_15 D_0 V_165 D_1 O_3 V_108', 'type': 'generic', 'doc': 'mole fractions ', 'network': 'macroscopic', 'incidence_list': ['108', '165']}}",
+      "index_structures": "[5]",
+      "label": "x_frac",
+      "network": "macroscopic",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "secondaryState",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "168": {
+      "aliases": "{'global_ID': ' V_168', 'python': 'P_NS_A', 'cpp': 'P_NS_A', 'matlab': 'P_NS_A', 'latex': 'P', 'internal_code': 'P_NS_A'}",
+      "doc": "projection of node species to arc for conductivity",
+      "equations": "{}",
+      "index_structures": "[2, 5]",
+      "label": "P_NS_A",
+      "network": "macroscopic",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "projection",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "169": {
+      "aliases": "{'global_ID': ' V_169', 'python': 'conductivity', 'cpp': 'conductivity', 'matlab': 'conductivity', 'latex': 'k^{e}', 'internal_code': 'conductivity'}",
+      "doc": "resistance in various forms",
+      "equations": "{164: {'rhs': ' F_15 D_0 F_15 D_0 V_163 D_1 O_4 D_0 V_168  O_5  I_5 O_5  F_2 D_0 V_166 D_1 D_1 D_1', 'type': 'generic', 'doc': 'resistance as a very simple function of the mole fraction', 'network': 'macroscopic', 'incidence_list': ['163', '166', '168']}, 166: {'rhs': ' O_11 D_0 V_169 D_7 V_1 D_1', 'type': 'generic', 'doc': 'resistance', 'network': 'macroscopic', 'incidence_list': ['1', '169']}}",
+      "index_structures": "[2]",
+      "label": "conductivity",
+      "network": "macroscopic",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "transport",
+      "units": "[3, -2, 0, -1, 0, 2, 0, 0]"
     }
   },
   "indices": {
@@ -1617,7 +1749,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 157,
-    "equation": 154
+    "variable": 169,
+    "equation": 166
   }
 }

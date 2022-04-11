@@ -305,7 +305,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}species molar mass\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:145"}{ 117 }\hypertarget{"e:117"}{  } &
-    \begin{eq}{T_ref}{_{N}} := \text{Instantiate}({T}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{eq}{T_{ref}}{_{N}} := \text{Instantiate}({T}{_{N}}, {\#}{_{}})\end{eq} &
     \begin{lay}refernce temperature\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:148"}{ 120 }\hypertarget{"e:120"}{  } &
@@ -317,7 +317,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}specific heat capacity at constant volume\end{lay} &
     \begin{lay}material\end{lay} \\
 \hyperlink{"v:18"}{ 122 }\hypertarget{"e:122"}{  } &
-    \begin{eq}{H}{_{N}} := {m}{_{N}} \, . \, \int_{ {T_ref}{_{N}} }^{ {T}{_{N}} } \, {cp}{_{N}} \enskip d\,{T}{_{N}}\end{eq} &
+    \begin{eq}{H}{_{N}} := {m}{_{N}} \, . \, \int_{ {T_{ref}}{_{N}} }^{ {T}{_{N}} } \, {cp}{_{N}} \enskip d\,{T}{_{N}}\end{eq} &
     \begin{lay}enthalpy\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:18"}{ 123 }\hypertarget{"e:123"}{  } &
@@ -333,7 +333,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}initial condition for enthalpy in nodes\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:152"}{ 126 }\hypertarget{"e:126"}{  } &
-    \begin{eq}{intensities}{_{}} := \text{MixedStack}\left( {p}{_{N}},{T}{_{N}},{\mu}{_{{N S}}},{c}{_{{N S}}} \right)\end{eq} &
+    \begin{eq}{\psi}{_{}} := \text{MixedStack}\left( {p}{_{N}},{T}{_{N}},{\mu}{_{{N S}}},{c}{_{{N S}}} \right)\end{eq} &
     \begin{lay}collected intensities\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:108"}{ 127 }\hypertarget{"e:127"}{  } &
@@ -440,5 +440,49 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{\rho}{_{N}} := \text{Instantiate}({\rho}{_{N}}, {\#}{_{}})\end{eq} &
     \begin{lay}mass density\end{lay} &
     \begin{lay}material\end{lay} \\
+\hyperlink{"v:158"}{ 155 }\hypertarget{"e:155"}{  } &
+    \begin{eq}{u}{_{A}} := {1}{_{}} \, . \, {y}{_{A}}\end{eq} &
+    \begin{lay}data link\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:160"}{ 156 }\hypertarget{"e:156"}{  } &
+    \begin{eq}{Ue}{_{N}} := \left( {C}{_{N}} \right)^{-1} \, . \, {U}{_{N}}\end{eq} &
+    \begin{lay}voltage\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:162"}{ 157 }\hypertarget{"e:157"}{  } &
+    \begin{eq}{\hat{I}}{_{A}} := {P}{_{N, A}} \stackrel{N}{\,\star\,} \TotDiff{{C}{_{N}}}{{t}{_{}}}\end{eq} &
+    \begin{lay}current definition\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:163"}{ 158 }\hypertarget{"e:158"}{  } &
+    \begin{eq}{k_{C}}{_{A}} := {D}{_{N, A}} \stackrel{N}{\,\star\,} \left( {Ue}{_{N}} \right)^{-1} \, . \, {\hat{I}}{_{A}}\end{eq} &
+    \begin{lay}electrical conductivity\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:162"}{ 159 }\hypertarget{"e:159"}{  } &
+    \begin{eq}{\hat{I}}{_{A}} := {k_{C}}{_{A}} \, . \, {D}{_{N, A}} \stackrel{N}{\,\star\,} {Ue}{_{N}}\end{eq} &
+    \begin{lay}current definition\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:163"}{ 160 }\hypertarget{"e:160"}{  } &
+    \begin{eq}{k_{C}}{_{A}} := \text{Instantiate}({k_{C}}{_{A}}, {\#}{_{}})\end{eq} &
+    \begin{lay}electrical conductivity\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:165"}{ 161 }\hypertarget{"e:161"}{  } &
+    \begin{eq}{c_{norm}}{_{N}} := {1}{_{{N S}}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {c}{_{{N S}}}\end{eq} &
+    \begin{lay}moles per node\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:166"}{ 162 }\hypertarget{"e:162"}{  } &
+    \begin{eq}{\xi}{_{{N S}}} := \left( {c_{norm}}{_{N}} \right)^{-1} \, {\odot} \, {c}{_{{N S}}}\end{eq} &
+    \begin{lay}mole fractions \end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:169"}{ 164 }\hypertarget{"e:164"}{  } &
+    \begin{eq}{k^{e}}{_{A}} := \left( \left( {k_{C}}{_{A}} \right)^{-1} \, . \, \left({P}{_{A, {N S}}} \stackrel{{N S}}{\,\star\,} ln({\xi}{_{{N S}}})\right) \right)^{-1}\end{eq} &
+    \begin{lay}resistance as a very simple function of the mole fraction\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:162"}{ 165 }\hypertarget{"e:165"}{  } &
+    \begin{eq}{\hat{I}}{_{A}} := {k^{e}}{_{A}} \, . \, \left({D}{_{N, A}} \stackrel{N}{\,\star\,} {Ue}{_{N}}\right)\end{eq} &
+    \begin{lay}current definition\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:169"}{ 166 }\hypertarget{"e:166"}{  } &
+    \begin{eq}{k^{e}}{_{A}} := \text{Instantiate}({k^{e}}{_{A}}, {\#}{_{}})\end{eq} &
+    \begin{lay}resistance\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
 \hline
 \end{longtable}

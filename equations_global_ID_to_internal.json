@@ -533,5 +533,60 @@
     "lhs": "density",
     "network": "material",
     "rhs": " Instantiate ( density , value )"
+  },
+  "155": {
+    "lhs": "u",
+    "network": "control",
+    "rhs": " one . y"
+  },
+  "156": {
+    "lhs": "Ue",
+    "network": "physical",
+    "rhs": " inv ( C ) . U"
+  },
+  "157": {
+    "lhs": "fC",
+    "network": "macroscopic",
+    "rhs": " P_N_A | N | TotalDiff ( C , t )"
+  },
+  "158": {
+    "lhs": "kC",
+    "network": "material",
+    "rhs": " D | N | inv ( Ue ) . fC"
+  },
+  "159": {
+    "lhs": "fC",
+    "network": "macroscopic",
+    "rhs": " kC . D | N | Ue"
+  },
+  "160": {
+    "lhs": "kC",
+    "network": "material",
+    "rhs": " Instantiate ( kC , value )"
+  },
+  "161": {
+    "lhs": "cnorm",
+    "network": "macroscopic",
+    "rhs": " ones_NS | S in N & S | c"
+  },
+  "162": {
+    "lhs": "x_frac",
+    "network": "macroscopic",
+    "rhs": " inv ( cnorm ) : c"
+  },
+  "164": {
+    "lhs": "conductivity",
+    "network": "macroscopic",
+    "rhs": " inv ( inv ( kC ) . ( P_NS_A | N & S | ln ( x_frac ) ) )"
+  },
+  "165": {
+    "lhs": "fC",
+    "network": "macroscopic",
+    "rhs": " conductivity . ( D | N | Ue )"
+  },
+  "166": {
+    "lhs": "conductivity",
+    "network": "macroscopic",
+    "rhs": " Instantiate ( conductivity , value )"
   }
 }

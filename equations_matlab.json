@@ -640,5 +640,71 @@
     "lhs": "density",
     "network": "material",
     "rhs": "Instantiate(density, value)"
+  },
+  "155": {
+    "variable_ID": 158,
+    "lhs": "u",
+    "network": "control",
+    "rhs": "one .* y"
+  },
+  "156": {
+    "variable_ID": 160,
+    "lhs": "Ue",
+    "network": "physical",
+    "rhs": "inv(C) .* U"
+  },
+  "157": {
+    "variable_ID": 162,
+    "lhs": "fC",
+    "network": "macroscopic",
+    "rhs": "( P_N_A )'  * TotalDiff(C,t)"
+  },
+  "158": {
+    "variable_ID": 163,
+    "lhs": "kC",
+    "network": "material",
+    "rhs": "( D )'  * inv(Ue) .* fC"
+  },
+  "159": {
+    "variable_ID": 162,
+    "lhs": "fC",
+    "network": "macroscopic",
+    "rhs": "( ( kC )'  .* D )'  * Ue"
+  },
+  "160": {
+    "variable_ID": 163,
+    "lhs": "kC",
+    "network": "material",
+    "rhs": "Instantiate(kC, value)"
+  },
+  "161": {
+    "variable_ID": 165,
+    "lhs": "cnorm",
+    "network": "macroscopic",
+    "rhs": "blockReduce(ones_NS, S, N_x_S, c)"
+  },
+  "162": {
+    "variable_ID": 166,
+    "lhs": "x_frac",
+    "network": "macroscopic",
+    "rhs": "khatriRao(inv(cnorm), [N], c, [N_x_S])"
+  },
+  "164": {
+    "variable_ID": 169,
+    "lhs": "conductivity",
+    "network": "macroscopic",
+    "rhs": "inv(inv(kC) .* (P_NS_A * ln(x_frac)))"
+  },
+  "165": {
+    "variable_ID": 162,
+    "lhs": "fC",
+    "network": "macroscopic",
+    "rhs": "conductivity .* (( D )'  * Ue)"
+  },
+  "166": {
+    "variable_ID": 169,
+    "lhs": "conductivity",
+    "network": "macroscopic",
+    "rhs": "Instantiate(conductivity, value)"
   }
 }

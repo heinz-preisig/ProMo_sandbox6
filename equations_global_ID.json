@@ -640,5 +640,71 @@
     "lhs": " V_71",
     "network": "material",
     "rhs": " O_11 D_0 V_71 D_7 V_1 D_1"
+  },
+  "155": {
+    "variable_ID": 158,
+    "lhs": " V_158",
+    "network": "control",
+    "rhs": " V_3 O_4 V_155"
+  },
+  "156": {
+    "variable_ID": 160,
+    "lhs": " V_160",
+    "network": "physical",
+    "rhs": " F_15 D_0 V_159 D_1 O_4 V_11"
+  },
+  "157": {
+    "variable_ID": 162,
+    "lhs": " V_162",
+    "network": "macroscopic",
+    "rhs": " V_161  O_5  I_1 O_5  O_8 D_0 V_159 D_7 V_6 D_1"
+  },
+  "158": {
+    "variable_ID": 163,
+    "lhs": " V_163",
+    "network": "material",
+    "rhs": " V_127  O_5  I_1 O_5  F_15 D_0 V_160 D_1 O_4 V_162"
+  },
+  "159": {
+    "variable_ID": 162,
+    "lhs": " V_162",
+    "network": "macroscopic",
+    "rhs": " V_163 O_4 V_127  O_5  I_1 O_5  V_160"
+  },
+  "160": {
+    "variable_ID": 163,
+    "lhs": " V_163",
+    "network": "material",
+    "rhs": " O_11 D_0 V_163 D_7 V_1 D_1"
+  },
+  "161": {
+    "variable_ID": 165,
+    "lhs": " V_165",
+    "network": "macroscopic",
+    "rhs": " V_164 O_5 I_3 O_14 I_5 O_5 V_108"
+  },
+  "162": {
+    "variable_ID": 166,
+    "lhs": " V_166",
+    "network": "macroscopic",
+    "rhs": " F_15 D_0 V_165 D_1 O_3 V_108"
+  },
+  "164": {
+    "variable_ID": 169,
+    "lhs": " V_169",
+    "network": "macroscopic",
+    "rhs": " F_15 D_0 F_15 D_0 V_163 D_1 O_4 D_0 V_168  O_5  I_5 O_5  F_2 D_0 V_166 D_1 D_1 D_1"
+  },
+  "165": {
+    "variable_ID": 162,
+    "lhs": " V_162",
+    "network": "macroscopic",
+    "rhs": " V_169 O_4 D_0 V_127  O_5  I_1 O_5  V_160 D_1"
+  },
+  "166": {
+    "variable_ID": 169,
+    "lhs": " V_169",
+    "network": "macroscopic",
+    "rhs": " O_11 D_0 V_169 D_7 V_1 D_1"
   }
 }
