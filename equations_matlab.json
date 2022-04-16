@@ -583,7 +583,7 @@
   },
   "143": {
     "variable_ID": 154,
-    "lhs": "data",
+    "lhs": "phys_data",
     "network": "material",
     "rhs": "MixedStack(kq,kc,kd,h,cp,cv,Mm,density)"
   },
@@ -653,30 +653,6 @@
     "network": "physical",
     "rhs": "inv(C) .* U"
   },
-  "157": {
-    "variable_ID": 162,
-    "lhs": "fC",
-    "network": "macroscopic",
-    "rhs": "( P_N_A )'  * TotalDiff(C,t)"
-  },
-  "158": {
-    "variable_ID": 163,
-    "lhs": "kC",
-    "network": "material",
-    "rhs": "( D )'  * inv(Ue) .* fC"
-  },
-  "159": {
-    "variable_ID": 162,
-    "lhs": "fC",
-    "network": "macroscopic",
-    "rhs": "( ( kC )'  .* D )'  * Ue"
-  },
-  "160": {
-    "variable_ID": 163,
-    "lhs": "kC",
-    "network": "material",
-    "rhs": "Instantiate(kC, value)"
-  },
   "161": {
     "variable_ID": 165,
     "lhs": "cnorm",
@@ -689,22 +665,112 @@
     "network": "macroscopic",
     "rhs": "khatriRao(inv(cnorm), [N], c, [N_x_S])"
   },
-  "164": {
-    "variable_ID": 169,
-    "lhs": "conductivity",
+  "168": {
+    "variable_ID": 173,
+    "lhs": "current_internal",
     "network": "macroscopic",
-    "rhs": "inv(inv(kC) .* (P_NS_A * ln(x_frac)))"
+    "rhs": "TotalDiff(C,t)"
   },
-  "165": {
-    "variable_ID": 162,
-    "lhs": "fC",
+  "175": {
+    "variable_ID": 181,
+    "lhs": "Ue_circuit",
     "network": "macroscopic",
-    "rhs": "conductivity .* (( D )'  * Ue)"
+    "rhs": "ones_N .* Ue"
   },
-  "166": {
-    "variable_ID": 169,
-    "lhs": "conductivity",
+  "176": {
+    "variable_ID": 181,
+    "lhs": "Ue_circuit",
     "network": "macroscopic",
-    "rhs": "Instantiate(conductivity, value)"
+    "rhs": "Instantiate(Ue_circuit, zero)"
+  },
+  "177": {
+    "variable_ID": 160,
+    "lhs": "Ue",
+    "network": "macroscopic",
+    "rhs": "Instantiate(Ue, value)"
+  },
+  "178": {
+    "variable_ID": 182,
+    "lhs": "kC",
+    "network": "material",
+    "rhs": "current_internal .* inv(Ue)"
+  },
+  "179": {
+    "variable_ID": 183,
+    "lhs": "i_NS",
+    "network": "macroscopic",
+    "rhs": "( P_N_NS )'  * current_internal"
+  },
+  "181": {
+    "variable_ID": 185,
+    "lhs": "k_e_xi",
+    "network": "material",
+    "rhs": "inv(Ue) .* (blockReduce(i_NS, S, N_x_S, ln(x_frac)))"
+  },
+  "182": {
+    "variable_ID": 160,
+    "lhs": "Ue",
+    "network": "macroscopic",
+    "rhs": "inv(k_e_xi) .* current_internal"
+  },
+  "191": {
+    "variable_ID": 188,
+    "lhs": "current_A",
+    "network": "macroscopic",
+    "rhs": "ones_A .* current"
+  },
+  "194": {
+    "variable_ID": 191,
+    "lhs": "k_e_o_xi",
+    "network": "material",
+    "rhs": "Instantiate(k_e_xi, value)"
+  },
+  "195": {
+    "variable_ID": 182,
+    "lhs": "kC",
+    "network": "material",
+    "rhs": "blockReduce(k_e_o_xi, S, N_x_S, x_frac)"
+  },
+  "196": {
+    "variable_ID": 173,
+    "lhs": "current_internal",
+    "network": "macroscopic",
+    "rhs": "kC .* Ue"
+  },
+  "197": {
+    "variable_ID": 173,
+    "lhs": "current_internal",
+    "network": "macroscopic",
+    "rhs": "ones_N .* current"
+  },
+  "198": {
+    "variable_ID": 187,
+    "lhs": "current",
+    "network": "macroscopic",
+    "rhs": "Root(current_internal)"
+  },
+  "199": {
+    "variable_ID": 192,
+    "lhs": "store_c",
+    "network": "control",
+    "rhs": "c"
+  },
+  "200": {
+    "variable_ID": 193,
+    "lhs": "voltage_diff",
+    "network": "control",
+    "rhs": "Ue"
+  },
+  "201": {
+    "variable_ID": 194,
+    "lhs": "store_current",
+    "network": "control",
+    "rhs": "current"
+  },
+  "202": {
+    "variable_ID": 195,
+    "lhs": "resistance",
+    "network": "control",
+    "rhs": "Ue .* inv(store_current)"
   }
 }

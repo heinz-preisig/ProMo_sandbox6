@@ -56,6 +56,38 @@
           }
         },
         "root": {
+          "charge|conduction|lumped": {
+            "enabled": {
+              "action": [],
+              "colour": [
+                0,
+                148,
+                153,
+                255
+              ],
+              "layer": "arc",
+              "movable": false,
+              "position_x": 0,
+              "position_y": 0,
+              "style": "dash dot",
+              "width": 2
+            },
+            "selected": {
+              "action": [],
+              "colour": [
+                252,
+                233,
+                79,
+                255
+              ],
+              "layer": "arc",
+              "movable": false,
+              "position_x": 0,
+              "position_y": 0,
+              "style": "dash dot",
+              "width": 2
+            }
+          },
           "energy|conduction|lumped": {
             "enabled": {
               "action": [],
@@ -919,6 +951,23 @@
           }
         },
         "root": {
+          "charge|conduction|lumped": {
+            "enabled": {
+              "action": [],
+              "colour": [
+                0,
+                148,
+                153,
+                255
+              ],
+              "layer": "arc",
+              "movable": false,
+              "position_x": 0,
+              "position_y": 0,
+              "style": "dash dot",
+              "width": 2
+            }
+          },
           "energy|conduction|lumped": {
             "enabled": {
               "action": [],
@@ -1795,6 +1844,53 @@
           }
         },
         "root": {
+          "charge|conduction|lumped": {
+            "enabled": {
+              "action": [],
+              "colour": [
+                0,
+                148,
+                153,
+                255
+              ],
+              "layer": "arc",
+              "movable": false,
+              "position_x": 0,
+              "position_y": 0,
+              "style": "dash dot",
+              "width": 2
+            },
+            "open": {
+              "action": [],
+              "colour": [
+                114,
+                159,
+                207,
+                255
+              ],
+              "layer": "arc",
+              "movable": false,
+              "position_x": 0,
+              "position_y": 0,
+              "style": "dash dot",
+              "width": 2
+            },
+            "selected": {
+              "action": [],
+              "colour": [
+                252,
+                233,
+                79,
+                255
+              ],
+              "layer": "arc",
+              "movable": false,
+              "position_x": 0,
+              "position_y": 0,
+              "style": "dash dot",
+              "width": 2
+            }
+          },
           "energy|conduction|lumped": {
             "enabled": {
               "action": [],
@@ -2148,12 +2244,6 @@
               "position_x": 0,
               "position_y": 20
             }
-          },
-          "dynamic|ODE": {
-            "-": {
-              "movable": false,
-              "position_y": 20
-            }
           }
         },
         "root": {
@@ -2172,13 +2262,6 @@
               "position_x": 0,
               "position_y": 0,
               "width": 15
-            }
-          },
-          "dynamic|ODE": {
-            "-": {
-              "height": 10,
-              "position_y": 0,
-              "width": 10
             }
           }
         }
@@ -2202,12 +2285,6 @@
               "movable": false,
               "position_x": 0,
               "position_y": 0,
-              "width": 15
-            }
-          },
-          "dynamic|ODE": {
-            "-": {
-              "height": 15,
               "width": 15
             }
           }
@@ -2393,12 +2470,6 @@
               "position_x": 0,
               "position_y": 50
             }
-          },
-          "dynamic|ODE": {
-            "-": {
-              "movable": true,
-              "position_y": 50
-            }
           }
         },
         "named_network": {
@@ -2418,12 +2489,6 @@
               "position_y": 0,
               "width": 10
             }
-          },
-          "dynamic|ODE": {
-            "-": {
-              "height": 15,
-              "width": 15
-            }
           }
         },
         "network": {
@@ -2441,13 +2506,6 @@
               "movable": false,
               "position_x": -15,
               "position_y": 0,
-              "width": 10
-            }
-          },
-          "dynamic|ODE": {
-            "-": {
-              "height": 10,
-              "position_x": -15,
               "width": 10
             }
           }
@@ -3222,6 +3280,14 @@
     ]
   },
   "tokens": {
+    "charge": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
     "energy": {
       "colour": [
         255,

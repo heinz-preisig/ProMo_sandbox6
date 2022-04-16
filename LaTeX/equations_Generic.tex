@@ -309,15 +309,15 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}refernce temperature\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:148"}{ 120 }\hypertarget{"e:120"}{  } &
-    \begin{eq}{cp}{_{N}} := {C_p}{_{N}} \, . \, \left( {m}{_{N}} \right)^{-1}\end{eq} &
+    \begin{eq}{c_{p}}{_{N}} := {C_p}{_{N}} \, . \, \left( {m}{_{N}} \right)^{-1}\end{eq} &
     \begin{lay}specific heat capacity at constant pressure\end{lay} &
     \begin{lay}material\end{lay} \\
 \hyperlink{"v:149"}{ 121 }\hypertarget{"e:121"}{  } &
-    \begin{eq}{cv}{_{N}} := {C_v}{_{N}} \, . \, \left( {m}{_{N}} \right)^{-1}\end{eq} &
+    \begin{eq}{c_{v}}{_{N}} := {C_v}{_{N}} \, . \, \left( {m}{_{N}} \right)^{-1}\end{eq} &
     \begin{lay}specific heat capacity at constant volume\end{lay} &
     \begin{lay}material\end{lay} \\
 \hyperlink{"v:18"}{ 122 }\hypertarget{"e:122"}{  } &
-    \begin{eq}{H}{_{N}} := {m}{_{N}} \, . \, \int_{ {T_{ref}}{_{N}} }^{ {T}{_{N}} } \, {cp}{_{N}} \enskip d\,{T}{_{N}}\end{eq} &
+    \begin{eq}{H}{_{N}} := {m}{_{N}} \, . \, \int_{ {T_{ref}}{_{N}} }^{ {T}{_{N}} } \, {c_{p}}{_{N}} \enskip d\,{T}{_{N}}\end{eq} &
     \begin{lay}enthalpy\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:18"}{ 123 }\hypertarget{"e:123"}{  } &
@@ -389,11 +389,11 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}partial molar enthalpies\end{lay} &
     \begin{lay}material\end{lay} \\
 \hyperlink{"v:148"}{ 140 }\hypertarget{"e:140"}{  } &
-    \begin{eq}{cp}{_{N}} := \text{Instantiate}({cp}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{eq}{c_{p}}{_{N}} := \text{Instantiate}({c_{p}}{_{N}}, {\#}{_{}})\end{eq} &
     \begin{lay}specific heat capacity at constant pressure\end{lay} &
     \begin{lay}material\end{lay} \\
 \hyperlink{"v:149"}{ 141 }\hypertarget{"e:141"}{  } &
-    \begin{eq}{cv}{_{N}} := \text{Instantiate}({cv}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{eq}{c_{v}}{_{N}} := \text{Instantiate}({c_{v}}{_{N}}, {\#}{_{}})\end{eq} &
     \begin{lay}specific heat capacity at constant volume\end{lay} &
     \begin{lay}material\end{lay} \\
 \hyperlink{"v:29"}{ 142 }\hypertarget{"e:142"}{  } &
@@ -401,7 +401,7 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}species molecular masses\end{lay} &
     \begin{lay}material\end{lay} \\
 \hyperlink{"v:154"}{ 143 }\hypertarget{"e:143"}{  } &
-    \begin{eq}{\theta}{_{}} := \text{MixedStack}\left( {k^q}{_{N}},{k^c}{_{N}},{k^d}{_{{N S}}},{h}{_{{N S}}},{cp}{_{N}},{cv}{_{N}},{\lambda}{_{S}},{\rho}{_{N}} \right)\end{eq} &
+    \begin{eq}{data}{_{}} := \text{MixedStack}\left( {k^q}{_{N}},{k^c}{_{N}},{k^d}{_{{N S}}},{h}{_{{N S}}},{c_{p}}{_{N}},{c_{v}}{_{N}},{\lambda}{_{S}},{\rho}{_{N}} \right)\end{eq} &
     \begin{lay}available data set\end{lay} &
     \begin{lay}material\end{lay} \\
 \hyperlink{"v:133"}{ 144 }\hypertarget{"e:144"}{  } &
@@ -445,44 +445,88 @@ no & equation &documentation &layer \\\hline\hline
     \begin{lay}data link\end{lay} &
     \begin{lay}control\end{lay} \\
 \hyperlink{"v:160"}{ 156 }\hypertarget{"e:156"}{  } &
-    \begin{eq}{Ue}{_{N}} := \left( {C}{_{N}} \right)^{-1} \, . \, {U}{_{N}}\end{eq} &
+    \begin{eq}{U^{e}}{_{N}} := \left( {C}{_{N}} \right)^{-1} \, . \, {U}{_{N}}\end{eq} &
     \begin{lay}voltage\end{lay} &
     \begin{lay}physical\end{lay} \\
-\hyperlink{"v:162"}{ 157 }\hypertarget{"e:157"}{  } &
-    \begin{eq}{\hat{I}}{_{A}} := {P}{_{N, A}} \stackrel{N}{\,\star\,} \TotDiff{{C}{_{N}}}{{t}{_{}}}\end{eq} &
-    \begin{lay}current definition\end{lay} &
-    \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:163"}{ 158 }\hypertarget{"e:158"}{  } &
-    \begin{eq}{k_{C}}{_{A}} := {D}{_{N, A}} \stackrel{N}{\,\star\,} \left( {Ue}{_{N}} \right)^{-1} \, . \, {\hat{I}}{_{A}}\end{eq} &
-    \begin{lay}electrical conductivity\end{lay} &
-    \begin{lay}material\end{lay} \\
-\hyperlink{"v:162"}{ 159 }\hypertarget{"e:159"}{  } &
-    \begin{eq}{\hat{I}}{_{A}} := {k_{C}}{_{A}} \, . \, {D}{_{N, A}} \stackrel{N}{\,\star\,} {Ue}{_{N}}\end{eq} &
-    \begin{lay}current definition\end{lay} &
-    \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:163"}{ 160 }\hypertarget{"e:160"}{  } &
-    \begin{eq}{k_{C}}{_{A}} := \text{Instantiate}({k_{C}}{_{A}}, {\#}{_{}})\end{eq} &
-    \begin{lay}electrical conductivity\end{lay} &
-    \begin{lay}material\end{lay} \\
 \hyperlink{"v:165"}{ 161 }\hypertarget{"e:161"}{  } &
-    \begin{eq}{c_{norm}}{_{N}} := {1}{_{{N S}}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {c}{_{{N S}}}\end{eq} &
+    \begin{eq}{n^{t}}{_{N}} := {1}{_{{N S}}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {c}{_{{N S}}}\end{eq} &
     \begin{lay}moles per node\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
 \hyperlink{"v:166"}{ 162 }\hypertarget{"e:162"}{  } &
-    \begin{eq}{\xi}{_{{N S}}} := \left( {c_{norm}}{_{N}} \right)^{-1} \, {\odot} \, {c}{_{{N S}}}\end{eq} &
+    \begin{eq}{\xi}{_{{N S}}} := \left( {n^{t}}{_{N}} \right)^{-1} \, {\odot} \, {c}{_{{N S}}}\end{eq} &
     \begin{lay}mole fractions \end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:169"}{ 164 }\hypertarget{"e:164"}{  } &
-    \begin{eq}{k^{e}}{_{A}} := \left( \left( {k_{C}}{_{A}} \right)^{-1} \, . \, \left({P}{_{A, {N S}}} \stackrel{{N S}}{\,\star\,} ln({\xi}{_{{N S}}})\right) \right)^{-1}\end{eq} &
-    \begin{lay}resistance as a very simple function of the mole fraction\end{lay} &
+\hyperlink{"v:173"}{ 168 }\hypertarget{"e:168"}{  } &
+    \begin{eq}{i}{_{N}} := \TotDiff{{C}{_{N}}}{{t}{_{}}}\end{eq} &
+    \begin{lay}internal current\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:162"}{ 165 }\hypertarget{"e:165"}{  } &
-    \begin{eq}{\hat{I}}{_{A}} := {k^{e}}{_{A}} \, . \, \left({D}{_{N, A}} \stackrel{N}{\,\star\,} {Ue}{_{N}}\right)\end{eq} &
-    \begin{lay}current definition\end{lay} &
+\hyperlink{"v:181"}{ 175 }\hypertarget{"e:175"}{  } &
+    \begin{eq}{U^{e,circuit}}{_{N}} := {1}{_{N}} \, . \, {U^{e}}{_{N}}\end{eq} &
+    \begin{lay}closed circuit potential (will be set to zero)\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:169"}{ 166 }\hypertarget{"e:166"}{  } &
-    \begin{eq}{k^{e}}{_{A}} := \text{Instantiate}({k^{e}}{_{A}}, {\#}{_{}})\end{eq} &
-    \begin{lay}resistance\end{lay} &
+\hyperlink{"v:181"}{ 176 }\hypertarget{"e:176"}{  } &
+    \begin{eq}{U^{e,circuit}}{_{N}} := \text{Instantiate}({U^{e,circuit}}{_{N}}, {0}{_{}})\end{eq} &
+    \begin{lay}closed circuit potential (will be set to zero)\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:160"}{ 177 }\hypertarget{"e:177"}{  } &
+    \begin{eq}{U^{e}}{_{N}} := \text{Instantiate}({U^{e}}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}voltage\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:182"}{ 178 }\hypertarget{"e:178"}{  } &
+    \begin{eq}{kC}{_{N}} := {i}{_{N}} \, . \, \left( {U^{e}}{_{N}} \right)^{-1}\end{eq} &
+    \begin{lay}electrical conductiviy\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:183"}{ 179 }\hypertarget{"e:179"}{  } &
+    \begin{eq}{i}{_{{N S}}} := {P}{_{N, {N S}}} \stackrel{N}{\,\star\,} {i}{_{N}}\end{eq} &
+    \begin{lay}current due to species transport\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:185"}{ 181 }\hypertarget{"e:181"}{  } &
+    \begin{eq}{k^{e,\xi}}{_{N}} := \left( {U^{e}}{_{N}} \right)^{-1} \, . \, \left({i}{_{{N S}}} \stackrel{ S \, \in \, {N S} }{\,\star\,} ln({\xi}{_{{N S}}})\right)\end{eq} &
+    \begin{lay}very simple model for electrical conductivity due to species transort\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:160"}{ 182 }\hypertarget{"e:182"}{  } &
+    \begin{eq}{U^{e}}{_{N}} := \left( {k^{e,\xi}}{_{N}} \right)^{-1} \, . \, {i}{_{N}}\end{eq} &
+    \begin{lay}voltage\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:188"}{ 191 }\hypertarget{"e:191"}{  } &
+    \begin{eq}{i}{_{A}} := {1}{_{A}} \, . \, {i}{_{}}\end{eq} &
+    \begin{lay}current in arc of circuit\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:191"}{ 194 }\hypertarget{"e:194"}{  } &
+    \begin{eq}{k^{e,\xi}}{_{N}} := \text{Instantiate}({k^{e,\xi}}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}base electrical conductivity per species\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:182"}{ 195 }\hypertarget{"e:195"}{  } &
+    \begin{eq}{kC}{_{N}} := {k^{e,\xi}}{_{N}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {\xi}{_{{N S}}}\end{eq} &
+    \begin{lay}electrical conductiviy in node\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:173"}{ 196 }\hypertarget{"e:196"}{  } &
+    \begin{eq}{i}{_{N}} := {kC}{_{N}} \, . \, {U^{e}}{_{N}}\end{eq} &
+    \begin{lay}internal current\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:173"}{ 197 }\hypertarget{"e:197"}{  } &
+    \begin{eq}{i}{_{N}} := {1}{_{N}} \, . \, {i}{_{}}\end{eq} &
+    \begin{lay}internal current\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:187"}{ 198 }\hypertarget{"e:198"}{  } &
+    \begin{eq}{i}{_{}} := Root\left( {i}{_{N}}\right)\end{eq} &
+    \begin{lay}generic current\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:192"}{ 199 }\hypertarget{"e:199"}{  } &
+    \begin{eq}{c}{_{{N S}}} := {c}{_{{N S}}}\end{eq} &
+    \begin{lay}store concentration\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:193"}{ 200 }\hypertarget{"e:200"}{  } &
+    \begin{eq}{V}{_{N}} := {U^{e}}{_{N}}\end{eq} &
+    \begin{lay}voltage differences\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:194"}{ 201 }\hypertarget{"e:201"}{  } &
+    \begin{eq}{I}{_{}} := {i}{_{}}\end{eq} &
+    \begin{lay}store current\end{lay} &
+    \begin{lay}control\end{lay} \\
+\hyperlink{"v:195"}{ 202 }\hypertarget{"e:202"}{  } &
+    \begin{eq}{R}{_{N}} := {U^{e}}{_{N}} \, . \, \left( {I}{_{}} \right)^{-1}\end{eq} &
+    \begin{lay}computed resistances\end{lay} &
+    \begin{lay}control\end{lay} \\
 \hline
 \end{longtable}

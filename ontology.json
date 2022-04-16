@@ -69,7 +69,8 @@
           "effort",
           "secondaryState",
           "conversion",
-          "diffState"
+          "diffState",
+          "internalTransport"
         ]
       },
       "children": [
@@ -84,6 +85,11 @@
       ],
       "structure": {
         "arc": {
+          "charge": {
+            "conduction": [
+              "lumped"
+            ]
+          },
           "energy": {
             "conduction": [
               "lumped"
@@ -113,6 +119,7 @@
           ]
         },
         "token": {
+          "charge": [],
           "energy": [],
           "mass": [
             "species"
@@ -139,7 +146,8 @@
           "effort",
           "secondaryState",
           "conversion",
-          "diffState"
+          "diffState",
+          "internalTransport"
         ]
       },
       "children": [],
@@ -152,6 +160,11 @@
       ],
       "structure": {
         "arc": {
+          "charge": {
+            "conduction": [
+              "lumped"
+            ]
+          },
           "energy": {
             "conduction": [
               "lumped"
@@ -181,6 +194,7 @@
           ]
         },
         "token": {
+          "charge": [],
           "energy": [],
           "mass": [
             "species"
@@ -207,7 +221,8 @@
           "effort",
           "secondaryState",
           "conversion",
-          "diffState"
+          "diffState",
+          "internalTransport"
         ]
       },
       "children": [],
@@ -220,6 +235,11 @@
       ],
       "structure": {
         "arc": {
+          "charge": {
+            "conduction": [
+              "lumped"
+            ]
+          },
           "energy": {
             "conduction": [
               "lumped"
@@ -249,6 +269,7 @@
           ]
         },
         "token": {
+          "charge": [],
           "energy": [],
           "mass": [
             "species"
@@ -275,7 +296,8 @@
           "effort",
           "secondaryState",
           "conversion",
-          "diffState"
+          "diffState",
+          "internalTransport"
         ]
       },
       "children": [
@@ -289,6 +311,11 @@
       ],
       "structure": {
         "arc": {
+          "charge": {
+            "conduction": [
+              "lumped"
+            ]
+          },
           "energy": {
             "conduction": [
               "lumped"
@@ -318,6 +345,7 @@
           ]
         },
         "token": {
+          "charge": [],
           "energy": [],
           "mass": [
             "species"
@@ -352,6 +380,11 @@
       ],
       "structure": {
         "arc": {
+          "charge": {
+            "conduction": [
+              "lumped"
+            ]
+          },
           "energy": {
             "conduction": [
               "lumped"
@@ -377,6 +410,7 @@
           "event": []
         },
         "token": {
+          "charge": [],
           "energy": [],
           "mass": [
             "species"
@@ -413,6 +447,11 @@
       ],
       "structure": {
         "arc": {
+          "charge": {
+            "conduction": [
+              "lumped"
+            ]
+          },
           "energy": {
             "conduction": [
               "lumped"
@@ -438,6 +477,7 @@
           "event": []
         },
         "token": {
+          "charge": [],
           "energy": [],
           "mass": [
             "species"
@@ -471,6 +511,11 @@
       ],
       "structure": {
         "arc": {
+          "charge": {
+            "conduction": [
+              "lumped"
+            ]
+          },
           "energy": {
             "conduction": [
               "lumped"
@@ -496,6 +541,7 @@
           "event": []
         },
         "token": {
+          "charge": [],
           "energy": [],
           "mass": [
             "species"
@@ -552,7 +598,8 @@
           "effort",
           "secondaryState",
           "conversion",
-          "diffState"
+          "diffState",
+          "internalTransport"
         ]
       },
       "children": [],
@@ -564,6 +611,11 @@
       ],
       "structure": {
         "arc": {
+          "charge": {
+            "conduction": [
+              "lumped"
+            ]
+          },
           "energy": {
             "conduction": [
               "lumped"
@@ -593,6 +645,7 @@
           ]
         },
         "token": {
+          "charge": [],
           "energy": [],
           "mass": [
             "species"
