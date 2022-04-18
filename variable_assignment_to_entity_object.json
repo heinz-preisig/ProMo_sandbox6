@@ -1,48 +1,6 @@
 {
   "behaviours": {
-    "control.node.constant|AE|signal.base": {
-      "tree": {
-        "0": {
-          "ancestors": [],
-          "children": [
-            1
-          ]
-        },
-        "1": {
-          "ancestors": [
-            0
-          ],
-          "children": [
-            2
-          ]
-        },
-        "2": {
-          "ancestors": [
-            1,
-            0
-          ],
-          "children": []
-        }
-      },
-      "nodes": {
-        "0": "variable_135",
-        "1": "equation_146",
-        "2": "variable_1"
-      },
-      "IDs": {
-        "variable_135": 0,
-        "equation_146": 1,
-        "variable_1": 2
-      },
-      "root_variable": 135,
-      "root_equation": 146,
-      "blocked": [],
-      "buddies": [],
-      "to_be_initialised": [
-        135
-      ]
-    },
-    "control.node.dynamic|ODE|signal.base": {
+    "control.node.dynamic|ODE|signal.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -301,7 +259,7 @@
         143
       ]
     },
-    "control.node.event|AE|signal.base": {
+    "control.node.event|AE|signal.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -434,9 +392,9 @@
         136
       ]
     },
-    "reactions.node.constant|infinity|charge.base": null,
-    "reactions.node.constant|infinity|energy.base": null,
-    "reactions.node.constant|infinity|mass.base": {
+    "reactions.node.constant|infinity|charge.base_0": null,
+    "reactions.node.constant|infinity|energy.base_0": null,
+    "reactions.node.constant|infinity|mass.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -639,9 +597,9 @@
         87
       ]
     },
-    "reactions.node.constant|infinity|charge_energy_mass.base": null,
-    "material.node.constant|infinity|charge.base": null,
-    "material.node.constant|infinity|energy.base": {
+    "reactions.node.constant|infinity|charge_energy_mass.base_0": null,
+    "material.node.constant|infinity|charge.base_0": null,
+    "material.node.constant|infinity|energy.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -3537,7 +3495,7 @@
         151
       ]
     },
-    "material.node.constant|infinity|mass.base": {
+    "material.node.constant|infinity|mass.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -6433,8 +6391,8 @@
         151
       ]
     },
-    "material.node.constant|infinity|charge_energy_mass.base": null,
-    "macroscopic.node.constant|infinity|charge.base": {
+    "material.node.constant|infinity|charge_energy_mass.base_0": null,
+    "macroscopic.node.constant|infinity|charge.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -9213,7 +9171,7 @@
         191
       ]
     },
-    "macroscopic.node.constant|infinity|energy.base": {
+    "macroscopic.node.constant|infinity|energy.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -11121,7 +11079,7 @@
         150
       ]
     },
-    "macroscopic.node.constant|infinity|mass.base": {
+    "macroscopic.node.constant|infinity|mass.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -13029,8 +12987,8 @@
         150
       ]
     },
-    "macroscopic.node.constant|infinity|charge_energy_mass.base": null,
-    "macroscopic.node.dynamic|lumped|charge.base": {
+    "macroscopic.node.constant|infinity|charge_energy_mass.base_0": null,
+    "macroscopic.node.dynamic|lumped|charge.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -15809,7 +15767,7 @@
         191
       ]
     },
-    "macroscopic.node.dynamic|lumped|energy.base": {
+    "macroscopic.node.dynamic|lumped|energy.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -18062,7 +18020,7 @@
         151
       ]
     },
-    "macroscopic.node.dynamic|lumped|mass.base": {
+    "macroscopic.node.dynamic|lumped|mass.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -19729,8 +19687,8 @@
         150
       ]
     },
-    "macroscopic.node.dynamic|lumped|charge_energy_mass.base": null,
-    "macroscopic.node.event|lumped|charge.base": {
+    "macroscopic.node.dynamic|lumped|charge_energy_mass.base_0": null,
+    "macroscopic.node.event|lumped|charge.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -22806,7 +22764,7 @@
         191
       ]
     },
-    "macroscopic.node.event|lumped|energy.base": {
+    "macroscopic.node.event|lumped|energy.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -25144,7 +25102,7 @@
         151
       ]
     },
-    "macroscopic.node.event|lumped|mass.base": {
+    "macroscopic.node.event|lumped|mass.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -26707,13 +26665,13 @@
         150
       ]
     },
-    "macroscopic.node.event|lumped|charge_energy_mass.base": null,
-    "physical.arc.charge|conduction|lumped.base": null,
-    "physical.arc.energy|conduction|lumped.base": null,
-    "physical.arc.energy|work|lumped.base": null,
-    "physical.arc.mass|convection|lumped.base": null,
-    "physical.arc.mass|diffusion|lumped.base": null,
-    "control.arc.signal|link|unidirectional.base": {
+    "macroscopic.node.event|lumped|charge_energy_mass.base_0": null,
+    "physical.arc.charge|conduction|lumped.base_0": null,
+    "physical.arc.energy|conduction|lumped.base_0": null,
+    "physical.arc.energy|work|lumped.base_0": null,
+    "physical.arc.mass|convection|lumped.base_0": null,
+    "physical.arc.mass|diffusion|lumped.base_0": null,
+    "control.arc.signal|link|unidirectional.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -27159,17 +27117,17 @@
         143
       ]
     },
-    "reactions.arc.charge|conduction|lumped.base": null,
-    "reactions.arc.energy|conduction|lumped.base": null,
-    "reactions.arc.energy|work|lumped.base": null,
-    "reactions.arc.mass|convection|lumped.base": null,
-    "reactions.arc.mass|diffusion|lumped.base": null,
-    "material.arc.charge|conduction|lumped.base": null,
-    "material.arc.energy|conduction|lumped.base": null,
-    "material.arc.energy|work|lumped.base": null,
-    "material.arc.mass|convection|lumped.base": null,
-    "material.arc.mass|diffusion|lumped.base": null,
-    "macroscopic.arc.charge|conduction|lumped.base": {
+    "reactions.arc.charge|conduction|lumped.base_0": null,
+    "reactions.arc.energy|conduction|lumped.base_0": null,
+    "reactions.arc.energy|work|lumped.base_0": null,
+    "reactions.arc.mass|convection|lumped.base_0": null,
+    "reactions.arc.mass|diffusion|lumped.base_0": null,
+    "material.arc.charge|conduction|lumped.base_0": null,
+    "material.arc.energy|conduction|lumped.base_0": null,
+    "material.arc.energy|work|lumped.base_0": null,
+    "material.arc.mass|convection|lumped.base_0": null,
+    "material.arc.mass|diffusion|lumped.base_0": null,
+    "macroscopic.arc.charge|conduction|lumped.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -30532,7 +30490,7 @@
         191
       ]
     },
-    "macroscopic.arc.energy|conduction|lumped.base": {
+    "macroscopic.arc.energy|conduction|lumped.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -30717,7 +30675,8 @@
         34
       ]
     },
-    "macroscopic.arc.mass|convection|lumped.base": {
+    "macroscopic.arc.energy|work|lumped.base_0": null,
+    "macroscopic.arc.mass|convection|lumped.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -32767,7 +32726,7 @@
         150
       ]
     },
-    "macroscopic.arc.mass|diffusion|lumped.base": {
+    "macroscopic.arc.mass|diffusion|lumped.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -34356,27 +34315,27 @@
         150
       ]
     },
-    "solid.arc.charge|conduction|lumped.base": null,
-    "solid.arc.energy|conduction|lumped.base": null,
-    "solid.arc.energy|work|lumped.base": null,
-    "solid.arc.mass|convection|lumped.base": null,
-    "solid.arc.mass|diffusion|lumped.base": null,
-    "fluid.arc.charge|conduction|lumped.base": null,
-    "fluid.arc.energy|conduction|lumped.base": null,
-    "fluid.arc.energy|work|lumped.base": null,
-    "fluid.arc.mass|convection|lumped.base": null,
-    "fluid.arc.mass|diffusion|lumped.base": null,
-    "liquid.arc.charge|conduction|lumped.base": null,
-    "liquid.arc.energy|conduction|lumped.base": null,
-    "liquid.arc.energy|work|lumped.base": null,
-    "liquid.arc.mass|convection|lumped.base": null,
-    "liquid.arc.mass|diffusion|lumped.base": null,
-    "gas.arc.charge|conduction|lumped.base": null,
-    "gas.arc.energy|conduction|lumped.base": null,
-    "gas.arc.energy|work|lumped.base": null,
-    "gas.arc.mass|convection|lumped.base": null,
-    "gas.arc.mass|diffusion|lumped.base": null,
-    "material.node.constant|infinity|energy_mass.base": {
+    "solid.arc.charge|conduction|lumped.base_0": null,
+    "solid.arc.energy|conduction|lumped.base_0": null,
+    "solid.arc.energy|work|lumped.base_0": null,
+    "solid.arc.mass|convection|lumped.base_0": null,
+    "solid.arc.mass|diffusion|lumped.base_0": null,
+    "fluid.arc.charge|conduction|lumped.base_0": null,
+    "fluid.arc.energy|conduction|lumped.base_0": null,
+    "fluid.arc.energy|work|lumped.base_0": null,
+    "fluid.arc.mass|convection|lumped.base_0": null,
+    "fluid.arc.mass|diffusion|lumped.base_0": null,
+    "liquid.arc.charge|conduction|lumped.base_0": null,
+    "liquid.arc.energy|conduction|lumped.base_0": null,
+    "liquid.arc.energy|work|lumped.base_0": null,
+    "liquid.arc.mass|convection|lumped.base_0": null,
+    "liquid.arc.mass|diffusion|lumped.base_0": null,
+    "gas.arc.charge|conduction|lumped.base_0": null,
+    "gas.arc.energy|conduction|lumped.base_0": null,
+    "gas.arc.energy|work|lumped.base_0": null,
+    "gas.arc.mass|convection|lumped.base_0": null,
+    "gas.arc.mass|diffusion|lumped.base_0": null,
+    "material.node.constant|infinity|energy_mass.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -37272,7 +37231,7 @@
         151
       ]
     },
-    "macroscopic.node.constant|infinity|energy_mass.base": {
+    "macroscopic.node.constant|infinity|energy_mass.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -39180,7 +39139,7 @@
         150
       ]
     },
-    "macroscopic.node.dynamic|lumped|energy_mass.base": {
+    "macroscopic.node.dynamic|lumped|energy_mass.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -41627,7 +41586,7 @@
         151
       ]
     },
-    "macroscopic.node.event|lumped|energy_mass.base": {
+    "macroscopic.node.event|lumped|energy_mass.base_0": {
       "tree": {
         "0": {
           "ancestors": [],
@@ -54377,48 +54336,6 @@
         149
       ]
     },
-    "control.node.constant|AE|signal.default": {
-      "tree": {
-        "0": {
-          "ancestors": [],
-          "children": [
-            1
-          ]
-        },
-        "1": {
-          "ancestors": [
-            0
-          ],
-          "children": [
-            2
-          ]
-        },
-        "2": {
-          "ancestors": [
-            1,
-            0
-          ],
-          "children": []
-        }
-      },
-      "nodes": {
-        "0": "variable_135",
-        "1": "equation_146",
-        "2": "variable_1"
-      },
-      "IDs": {
-        "variable_135": 0,
-        "equation_146": 1,
-        "variable_1": 2
-      },
-      "root_variable": 135,
-      "root_equation": 146,
-      "blocked": [],
-      "buddies": [],
-      "to_be_initialised": [
-        135
-      ]
-    },
     "control.node.dynamic|ODE|signal.default": {
       "tree": {
         "0": {
@@ -58389,6 +58306,6 @@
       "buddies": [],
       "to_be_initialised": []
     },
-    "macroscopic.arc.energy|work|lumped.base": null
+    "control.node.constant|AE|signal.base_0": null
   }
 }
