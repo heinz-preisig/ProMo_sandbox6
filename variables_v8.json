@@ -1466,7 +1466,7 @@
       "units": "[-3, 2, 0, 1, 0, -1, 0, 0]"
     },
     "182": {
-      "aliases": "{'global_ID': ' V_182', 'python': 'kC', 'cpp': 'kC', 'matlab': 'kC', 'latex': 'kC', 'internal_code': 'kC'}",
+      "aliases": "{'global_ID': ' V_182', 'python': 'kC', 'cpp': 'kC', 'matlab': 'kC', 'latex': 'k^{e}', 'internal_code': 'kC'}",
       "doc": "electrical conductiviy",
       "equations": "{178: {'rhs': ' V_173 O_4 F_15 D_0 V_160 D_1', 'type': 'generic', 'doc': 'electrical conductiviy', 'network': 'material', 'incidence_list': ['160', '173']}, 195: {'rhs': ' V_191 O_5 I_3 O_14 I_5 O_5 V_166', 'type': 'generic', 'doc': 'electrical conductiviy in node', 'network': 'material', 'incidence_list': ['166', '191']}}",
       "index_structures": "[1]",
@@ -1510,7 +1510,7 @@
       "network": "macroscopic",
       "port_variable": "True",
       "tokens": "[]",
-      "type": "state",
+      "type": "internalTransport",
       "units": "[0, 0, 0, 0, 0, 1, 0, 0]"
     },
     "188": {

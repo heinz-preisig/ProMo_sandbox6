@@ -691,7 +691,7 @@
   },
   "178": {
     "variable_ID": 182,
-    "lhs": "{kC}{_{N}}",
+    "lhs": "{k^{e}}{_{N}}",
     "network": "material",
     "rhs": "{i}{_{N}} \\, . \\, \\left( {U^{e}}{_{N}} \\right)^{-1}"
   },
@@ -727,7 +727,7 @@
   },
   "195": {
     "variable_ID": 182,
-    "lhs": "{kC}{_{N}}",
+    "lhs": "{k^{e}}{_{N}}",
     "network": "material",
     "rhs": "{k^{e,\\xi}}{_{N}} \\stackrel{ S \\, \\in \\, {N S} }{\\,\\star\\,} {\\xi}{_{{N S}}}"
   },
@@ -735,7 +735,7 @@
     "variable_ID": 173,
     "lhs": "{i}{_{N}}",
     "network": "macroscopic",
-    "rhs": "{kC}{_{N}} \\, . \\, {U^{e}}{_{N}}"
+    "rhs": "{k^{e}}{_{N}} \\, . \\, {U^{e}}{_{N}}"
   },
   "197": {
     "variable_ID": 173,
