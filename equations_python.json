@@ -647,12 +647,6 @@
     "network": "control",
     "rhs": "np.multiply(one, y)"
   },
-  "156": {
-    "variable_ID": 160,
-    "lhs": "Ue",
-    "network": "physical",
-    "rhs": "np.multiply(np.reciprocal(C), U)"
-  },
   "161": {
     "variable_ID": 165,
     "lhs": "cnorm",
@@ -664,5 +658,29 @@
     "lhs": "x_frac",
     "network": "macroscopic",
     "rhs": "khatriRao(np.reciprocal(cnorm), [N], c, [N_x_S])"
+  },
+  "166": {
+    "variable_ID": 171,
+    "lhs": "ElecPotential",
+    "network": "physical",
+    "rhs": "np.multiply(np.reciprocal(U), Charge)"
+  },
+  "167": {
+    "variable_ID": 172,
+    "lhs": "current",
+    "network": "macroscopic",
+    "rhs": "TotalDiff(Charge, t)"
+  },
+  "168": {
+    "variable_ID": 173,
+    "lhs": "elecResistance",
+    "network": "material",
+    "rhs": "np.multiply(np.reciprocal(ElecPotential), current)"
+  },
+  "169": {
+    "variable_ID": 176,
+    "lhs": "elecConductivityFrac",
+    "network": "material",
+    "rhs": "np.multiply(np.reciprocal(elecResistance), additiveFraction)"
   }
 }

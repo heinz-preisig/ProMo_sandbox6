@@ -539,11 +539,6 @@
     "network": "control",
     "rhs": " one . y"
   },
-  "156": {
-    "lhs": "Ue",
-    "network": "physical",
-    "rhs": " inv ( C ) . U"
-  },
   "161": {
     "lhs": "cnorm",
     "network": "macroscopic",
@@ -553,5 +548,25 @@
     "lhs": "x_frac",
     "network": "macroscopic",
     "rhs": " inv ( cnorm ) : c"
+  },
+  "166": {
+    "lhs": "ElecPotential",
+    "network": "physical",
+    "rhs": " inv ( U ) . Charge"
+  },
+  "167": {
+    "lhs": "current",
+    "network": "macroscopic",
+    "rhs": " TotalDiff ( Charge , t )"
+  },
+  "168": {
+    "lhs": "elecResistance",
+    "network": "material",
+    "rhs": " inv ( ElecPotential ) . current"
+  },
+  "169": {
+    "lhs": "elecConductivityFrac",
+    "network": "material",
+    "rhs": " inv ( elecResistance ) . additiveFraction"
   }
 }

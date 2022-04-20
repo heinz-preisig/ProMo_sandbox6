@@ -647,12 +647,6 @@
     "network": "control",
     "rhs": "{1}{_{}} \\, . \\, {y}{_{A}}"
   },
-  "156": {
-    "variable_ID": 160,
-    "lhs": "{Ue}{_{N}}",
-    "network": "physical",
-    "rhs": "\\left( {C}{_{N}} \\right)^{-1} \\, . \\, {U}{_{N}}"
-  },
   "161": {
     "variable_ID": 165,
     "lhs": "{c_{norm}}{_{N}}",
@@ -664,5 +658,29 @@
     "lhs": "{\\xi}{_{{N S}}}",
     "network": "macroscopic",
     "rhs": "\\left( {c_{norm}}{_{N}} \\right)^{-1} \\, {\\odot} \\, {c}{_{{N S}}}"
+  },
+  "166": {
+    "variable_ID": 171,
+    "lhs": "{ElecPotential}{_{N}}",
+    "network": "physical",
+    "rhs": "\\left( {U}{_{N}} \\right)^{-1} \\, . \\, {Charge}{_{}}"
+  },
+  "167": {
+    "variable_ID": 172,
+    "lhs": "{current}{_{}}",
+    "network": "macroscopic",
+    "rhs": "\\TotDiff{{Charge}{_{}}}{{t}{_{}}}"
+  },
+  "168": {
+    "variable_ID": 173,
+    "lhs": "{elecResistance}{_{N}}",
+    "network": "material",
+    "rhs": "\\left( {ElecPotential}{_{N}} \\right)^{-1} \\, . \\, {current}{_{}}"
+  },
+  "169": {
+    "variable_ID": 176,
+    "lhs": "{elecConductivityFrac}{_{N}}",
+    "network": "material",
+    "rhs": "\\left( {elecResistance}{_{N}} \\right)^{-1} \\, . \\, {additiveFraction}{_{N}}"
   }
 }

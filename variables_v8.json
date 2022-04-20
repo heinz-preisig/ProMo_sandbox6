@@ -1321,30 +1321,6 @@
       "type": "input",
       "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
     },
-    "159": {
-      "aliases": "{'global_ID': ' V_159', 'python': 'C', 'cpp': 'C', 'matlab': 'C', 'latex': 'C', 'internal_code': 'C'}",
-      "doc": "charge",
-      "equations": "{}",
-      "index_structures": "[1]",
-      "label": "C",
-      "network": "physical",
-      "port_variable": "True",
-      "tokens": "[]",
-      "type": "state",
-      "units": "[1, 0, 0, 0, 0, 1, 0, 0]"
-    },
-    "160": {
-      "aliases": "{'global_ID': ' V_160', 'python': 'Ue', 'cpp': 'Ue', 'matlab': 'Ue', 'latex': 'Ue', 'internal_code': 'Ue'}",
-      "doc": "voltage",
-      "equations": "{156: {'rhs': ' F_15 D_0 V_159 D_1 O_4 V_11', 'type': 'generic', 'doc': 'voltage', 'network': 'physical', 'incidence_list': ['11', '159']}}",
-      "index_structures": "[1]",
-      "label": "Ue",
-      "network": "physical",
-      "port_variable": "False",
-      "tokens": "[]",
-      "type": "effort",
-      "units": "[-3, 2, 0, 1, 0, -1, 0, 0]"
-    },
     "161": {
       "aliases": "{'global_ID': ' V_161', 'python': 'P_N_A', 'cpp': 'P_N_A', 'matlab': 'P_N_A', 'latex': 'P', 'internal_code': 'P_N_A'}",
       "doc": "project node to arc for material properties",
@@ -1404,6 +1380,78 @@
       "tokens": "[]",
       "type": "projection",
       "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "170": {
+      "aliases": "{'global_ID': ' V_170', 'python': 'Charge', 'cpp': 'Charge', 'matlab': 'Charge', 'latex': 'Charge', 'internal_code': 'Charge'}",
+      "doc": "charge",
+      "equations": "{}",
+      "index_structures": "[]",
+      "label": "Charge",
+      "network": "physical",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "state",
+      "units": "[1, 0, 0, 0, 0, 1, 0, 0]"
+    },
+    "171": {
+      "aliases": "{'global_ID': ' V_171', 'python': 'ElecPotential', 'cpp': 'ElecPotential', 'matlab': 'ElecPotential', 'latex': 'ElecPotential', 'internal_code': 'ElecPotential'}",
+      "doc": "electrical potential in volts",
+      "equations": "{166: {'rhs': ' F_15 D_0 V_11 D_1 O_4 V_170', 'type': 'generic', 'doc': 'electrical potential in volts', 'network': 'physical', 'incidence_list': ['11', '170']}}",
+      "index_structures": "[1]",
+      "label": "ElecPotential",
+      "network": "physical",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "effort",
+      "units": "[3, -2, 0, -1, 0, 1, 0, 0]"
+    },
+    "172": {
+      "aliases": "{'global_ID': ' V_172', 'python': 'current', 'cpp': 'current', 'matlab': 'current', 'latex': 'current', 'internal_code': 'current'}",
+      "doc": "electrical current",
+      "equations": "{167: {'rhs': ' O_8 D_0 V_170 D_7 V_6 D_1', 'type': 'generic', 'doc': 'electrical current', 'network': 'macroscopic', 'incidence_list': ['170', '6']}}",
+      "index_structures": "[]",
+      "label": "current",
+      "network": "macroscopic",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "internalTransport",
+      "units": "[0, 0, 0, 0, 0, 1, 0, 0]"
+    },
+    "173": {
+      "aliases": "{'global_ID': ' V_173', 'python': 'elecResistance', 'cpp': 'elecResistance', 'matlab': 'elecResistance', 'latex': 'elecResistance', 'internal_code': 'elecResistance'}",
+      "doc": "electrical resistance",
+      "equations": "{168: {'rhs': ' F_15 D_0 V_171 D_1 O_4 V_172', 'type': 'generic', 'doc': 'electrical resistance', 'network': 'material', 'incidence_list': ['171', '172']}}",
+      "index_structures": "[1]",
+      "label": "elecResistance",
+      "network": "material",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "property",
+      "units": "[-3, 2, 0, 1, 0, 0, 0, 0]"
+    },
+    "175": {
+      "aliases": "{'global_ID': ' V_175', 'python': 'additiveFraction', 'cpp': 'additiveFraction', 'matlab': 'additiveFraction', 'latex': 'additiveFraction', 'internal_code': 'additiveFraction'}",
+      "doc": "active additive fraction",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "additiveFraction",
+      "network": "material",
+      "port_variable": "True",
+      "tokens": "[]",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "176": {
+      "aliases": "{'global_ID': ' V_176', 'python': 'elecConductivityFrac', 'cpp': 'elecConductivityFrac', 'matlab': 'elecConductivityFrac', 'latex': 'elecConductivityFrac', 'internal_code': 'elecConductivityFrac'}",
+      "doc": "electrical conductivity as function of additive",
+      "equations": "{169: {'rhs': ' F_15 D_0 V_173 D_1 O_4 V_175', 'type': 'generic', 'doc': 'electrical conductivity as function of additive', 'network': 'material', 'incidence_list': ['173', '175']}}",
+      "index_structures": "[1]",
+      "label": "elecConductivityFrac",
+      "network": "material",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "property",
+      "units": "[3, -2, 0, -1, 0, 0, 0, 0]"
     }
   },
   "indices": {
@@ -1713,7 +1761,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 169,
-    "equation": 165
+    "variable": 176,
+    "equation": 169
   }
 }

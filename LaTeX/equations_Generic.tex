@@ -444,10 +444,6 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{u}{_{A}} := {1}{_{}} \, . \, {y}{_{A}}\end{eq} &
     \begin{lay}data link\end{lay} &
     \begin{lay}control\end{lay} \\
-\hyperlink{"v:160"}{ 156 }\hypertarget{"e:156"}{  } &
-    \begin{eq}{Ue}{_{N}} := \left( {C}{_{N}} \right)^{-1} \, . \, {U}{_{N}}\end{eq} &
-    \begin{lay}voltage\end{lay} &
-    \begin{lay}physical\end{lay} \\
 \hyperlink{"v:165"}{ 161 }\hypertarget{"e:161"}{  } &
     \begin{eq}{c_{norm}}{_{N}} := {1}{_{{N S}}} \stackrel{ S \, \in \, {N S} }{\,\star\,} {c}{_{{N S}}}\end{eq} &
     \begin{lay}moles per node\end{lay} &
@@ -456,5 +452,21 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{\xi}{_{{N S}}} := \left( {c_{norm}}{_{N}} \right)^{-1} \, {\odot} \, {c}{_{{N S}}}\end{eq} &
     \begin{lay}mole fractions \end{lay} &
     \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:171"}{ 166 }\hypertarget{"e:166"}{  } &
+    \begin{eq}{ElecPotential}{_{N}} := \left( {U}{_{N}} \right)^{-1} \, . \, {Charge}{_{}}\end{eq} &
+    \begin{lay}electrical potential in volts\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:172"}{ 167 }\hypertarget{"e:167"}{  } &
+    \begin{eq}{current}{_{}} := \TotDiff{{Charge}{_{}}}{{t}{_{}}}\end{eq} &
+    \begin{lay}electrical current\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:173"}{ 168 }\hypertarget{"e:168"}{  } &
+    \begin{eq}{elecResistance}{_{N}} := \left( {ElecPotential}{_{N}} \right)^{-1} \, . \, {current}{_{}}\end{eq} &
+    \begin{lay}electrical resistance\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:176"}{ 169 }\hypertarget{"e:169"}{  } &
+    \begin{eq}{elecConductivityFrac}{_{N}} := \left( {elecResistance}{_{N}} \right)^{-1} \, . \, {additiveFraction}{_{N}}\end{eq} &
+    \begin{lay}electrical conductivity as function of additive\end{lay} &
+    \begin{lay}material\end{lay} \\
 \hline
 \end{longtable}

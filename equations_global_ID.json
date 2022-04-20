@@ -647,12 +647,6 @@
     "network": "control",
     "rhs": " V_3 O_4 V_155"
   },
-  "156": {
-    "variable_ID": 160,
-    "lhs": " V_160",
-    "network": "physical",
-    "rhs": " F_15 D_0 V_159 D_1 O_4 V_11"
-  },
   "161": {
     "variable_ID": 165,
     "lhs": " V_165",
@@ -664,5 +658,29 @@
     "lhs": " V_166",
     "network": "macroscopic",
     "rhs": " F_15 D_0 V_165 D_1 O_3 V_108"
+  },
+  "166": {
+    "variable_ID": 171,
+    "lhs": " V_171",
+    "network": "physical",
+    "rhs": " F_15 D_0 V_11 D_1 O_4 V_170"
+  },
+  "167": {
+    "variable_ID": 172,
+    "lhs": " V_172",
+    "network": "macroscopic",
+    "rhs": " O_8 D_0 V_170 D_7 V_6 D_1"
+  },
+  "168": {
+    "variable_ID": 173,
+    "lhs": " V_173",
+    "network": "material",
+    "rhs": " F_15 D_0 V_171 D_1 O_4 V_172"
+  },
+  "169": {
+    "variable_ID": 176,
+    "lhs": " V_176",
+    "network": "material",
+    "rhs": " F_15 D_0 V_173 D_1 O_4 V_175"
   }
 }

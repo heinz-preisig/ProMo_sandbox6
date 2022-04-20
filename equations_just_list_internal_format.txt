@@ -106,6 +106,9 @@
 153 :: y =  D_A . e
 154 :: density =  Instantiate ( density , value )
 155 :: u =  one . y
-156 :: Ue =  inv ( C ) . U
 161 :: cnorm =  ones_NS | S in N & S | c
 162 :: x_frac =  inv ( cnorm ) : c
+166 :: ElecPotential =  inv ( U ) . Charge
+167 :: current =  TotalDiff ( Charge , t )
+168 :: elecResistance =  inv ( ElecPotential ) . current
+169 :: elecConductivityFrac =  inv ( elecResistance ) . additiveFraction
