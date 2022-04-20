@@ -550,12 +550,12 @@
                 255,
                 100
               ],
-              "height": 10,
+              "height": 15,
               "layer": "named_network",
               "movable": false,
               "position_x": -20,
               "position_y": 0,
-              "width": 10
+              "width": 15
             }
           }
         },
@@ -569,12 +569,12 @@
                 255,
                 100
               ],
-              "height": 10,
+              "height": 15,
               "layer": "network",
               "movable": false,
               "position_x": -15,
               "position_y": 0,
-              "width": 10
+              "width": 15
             }
           }
         },
@@ -1370,12 +1370,12 @@
                 255,
                 100
               ],
-              "height": 10,
+              "height": 15,
               "layer": "named_network",
               "movable": false,
               "position_x": -20,
               "position_y": 0,
-              "width": 10
+              "width": 15
             }
           }
         },
@@ -1389,12 +1389,12 @@
                 255,
                 100
               ],
-              "height": 10,
+              "height": 15,
               "layer": "network",
               "movable": false,
               "position_x": -15,
               "position_y": 0,
-              "width": 10
+              "width": 15
             }
           }
         },
@@ -2482,11 +2482,18 @@
                 255,
                 100
               ],
-              "height": 10,
+              "height": 15,
               "layer": "named_network",
               "movable": false,
               "position_x": -20,
               "position_y": 0,
+              "width": 15
+            }
+          },
+          "dynamic|lumped": {
+            "-": {
+              "height": 10,
+              "position_x": -20,
               "width": 10
             }
           }
@@ -2501,11 +2508,18 @@
                 255,
                 100
               ],
-              "height": 10,
+              "height": 15,
               "layer": "network",
               "movable": false,
               "position_x": -15,
               "position_y": 0,
+              "width": 15
+            }
+          },
+          "dynamic|lumped": {
+            "-": {
+              "height": 10,
+              "position_x": -15,
               "width": 10
             }
           }
@@ -3282,10 +3296,10 @@
   "tokens": {
     "charge": {
       "colour": [
-        255,
-        255,
-        255,
-        100
+        78,
+        154,
+        6,
+        255
       ]
     },
     "energy": {

@@ -445,13 +445,13 @@
   },
   "120": {
     "variable_ID": 148,
-    "lhs": "{c_{p}}{_{N}}",
+    "lhs": "{cp}{_{N}}",
     "network": "material",
     "rhs": "{C_p}{_{N}} \\, . \\, \\left( {m}{_{N}} \\right)^{-1}"
   },
   "121": {
     "variable_ID": 149,
-    "lhs": "{c_{v}}{_{N}}",
+    "lhs": "{cv}{_{N}}",
     "network": "material",
     "rhs": "{C_v}{_{N}} \\, . \\, \\left( {m}{_{N}} \\right)^{-1}"
   },
@@ -459,7 +459,7 @@
     "variable_ID": 18,
     "lhs": "{H}{_{N}}",
     "network": "macroscopic",
-    "rhs": "{m}{_{N}} \\, . \\, \\int_{ {T_{ref}}{_{N}} }^{ {T}{_{N}} } \\, {c_{p}}{_{N}} \\enskip d\\,{T}{_{N}}"
+    "rhs": "{m}{_{N}} \\, . \\, \\int_{ {T_{ref}}{_{N}} }^{ {T}{_{N}} } \\, {cp}{_{N}} \\enskip d\\,{T}{_{N}}"
   },
   "123": {
     "variable_ID": 18,
@@ -565,15 +565,15 @@
   },
   "140": {
     "variable_ID": 148,
-    "lhs": "{c_{p}}{_{N}}",
+    "lhs": "{cp}{_{N}}",
     "network": "material",
-    "rhs": "\\text{Instantiate}({c_{p}}{_{N}}, {\\#}{_{}})"
+    "rhs": "\\text{Instantiate}({cp}{_{N}}, {\\#}{_{}})"
   },
   "141": {
     "variable_ID": 149,
-    "lhs": "{c_{v}}{_{N}}",
+    "lhs": "{cv}{_{N}}",
     "network": "material",
-    "rhs": "\\text{Instantiate}({c_{v}}{_{N}}, {\\#}{_{}})"
+    "rhs": "\\text{Instantiate}({cv}{_{N}}, {\\#}{_{}})"
   },
   "142": {
     "variable_ID": 29,
@@ -583,9 +583,9 @@
   },
   "143": {
     "variable_ID": 154,
-    "lhs": "{data}{_{}}",
+    "lhs": "{\\theta}{_{}}",
     "network": "material",
-    "rhs": "\\text{MixedStack}\\left( {k^q}{_{N}},{k^c}{_{N}},{k^d}{_{{N S}}},{h}{_{{N S}}},{c_{p}}{_{N}},{c_{v}}{_{N}},{\\lambda}{_{S}},{\\rho}{_{N}} \\right)"
+    "rhs": "\\text{MixedStack}\\left( {k^q}{_{N}},{k^c}{_{N}},{k^d}{_{{N S}}},{h}{_{{N S}}},{cp}{_{N}},{cv}{_{N}},{\\lambda}{_{S}},{\\rho}{_{N}} \\right)"
   },
   "144": {
     "variable_ID": 133,
@@ -649,13 +649,13 @@
   },
   "156": {
     "variable_ID": 160,
-    "lhs": "{U^{e}}{_{N}}",
+    "lhs": "{Ue}{_{N}}",
     "network": "physical",
     "rhs": "\\left( {C}{_{N}} \\right)^{-1} \\, . \\, {U}{_{N}}"
   },
   "161": {
     "variable_ID": 165,
-    "lhs": "{n^{t}}{_{N}}",
+    "lhs": "{c_{norm}}{_{N}}",
     "network": "macroscopic",
     "rhs": "{1}{_{{N S}}} \\stackrel{ S \\, \\in \\, {N S} }{\\,\\star\\,} {c}{_{{N S}}}"
   },
@@ -663,114 +663,6 @@
     "variable_ID": 166,
     "lhs": "{\\xi}{_{{N S}}}",
     "network": "macroscopic",
-    "rhs": "\\left( {n^{t}}{_{N}} \\right)^{-1} \\, {\\odot} \\, {c}{_{{N S}}}"
-  },
-  "168": {
-    "variable_ID": 173,
-    "lhs": "{i}{_{N}}",
-    "network": "macroscopic",
-    "rhs": "\\TotDiff{{C}{_{N}}}{{t}{_{}}}"
-  },
-  "175": {
-    "variable_ID": 181,
-    "lhs": "{U^{e,circuit}}{_{N}}",
-    "network": "macroscopic",
-    "rhs": "{1}{_{N}} \\, . \\, {U^{e}}{_{N}}"
-  },
-  "176": {
-    "variable_ID": 181,
-    "lhs": "{U^{e,circuit}}{_{N}}",
-    "network": "macroscopic",
-    "rhs": "\\text{Instantiate}({U^{e,circuit}}{_{N}}, {0}{_{}})"
-  },
-  "177": {
-    "variable_ID": 160,
-    "lhs": "{U^{e}}{_{N}}",
-    "network": "macroscopic",
-    "rhs": "\\text{Instantiate}({U^{e}}{_{N}}, {\\#}{_{}})"
-  },
-  "178": {
-    "variable_ID": 182,
-    "lhs": "{k^{e}}{_{N}}",
-    "network": "material",
-    "rhs": "{i}{_{N}} \\, . \\, \\left( {U^{e}}{_{N}} \\right)^{-1}"
-  },
-  "179": {
-    "variable_ID": 183,
-    "lhs": "{i}{_{{N S}}}",
-    "network": "macroscopic",
-    "rhs": "{P}{_{N, {N S}}} \\stackrel{N}{\\,\\star\\,} {i}{_{N}}"
-  },
-  "181": {
-    "variable_ID": 185,
-    "lhs": "{k^{e,\\xi}}{_{N}}",
-    "network": "material",
-    "rhs": "\\left( {U^{e}}{_{N}} \\right)^{-1} \\, . \\, \\left({i}{_{{N S}}} \\stackrel{ S \\, \\in \\, {N S} }{\\,\\star\\,} ln({\\xi}{_{{N S}}})\\right)"
-  },
-  "182": {
-    "variable_ID": 160,
-    "lhs": "{U^{e}}{_{N}}",
-    "network": "macroscopic",
-    "rhs": "\\left( {k^{e,\\xi}}{_{N}} \\right)^{-1} \\, . \\, {i}{_{N}}"
-  },
-  "191": {
-    "variable_ID": 188,
-    "lhs": "{i}{_{A}}",
-    "network": "macroscopic",
-    "rhs": "{1}{_{A}} \\, . \\, {i}{_{}}"
-  },
-  "194": {
-    "variable_ID": 191,
-    "lhs": "{k^{e,\\xi}}{_{N}}",
-    "network": "material",
-    "rhs": "\\text{Instantiate}({k^{e,\\xi}}{_{N}}, {\\#}{_{}})"
-  },
-  "195": {
-    "variable_ID": 182,
-    "lhs": "{k^{e}}{_{N}}",
-    "network": "material",
-    "rhs": "{k^{e,\\xi}}{_{N}} \\stackrel{ S \\, \\in \\, {N S} }{\\,\\star\\,} {\\xi}{_{{N S}}}"
-  },
-  "196": {
-    "variable_ID": 173,
-    "lhs": "{i}{_{N}}",
-    "network": "macroscopic",
-    "rhs": "{k^{e}}{_{N}} \\, . \\, {U^{e}}{_{N}}"
-  },
-  "197": {
-    "variable_ID": 173,
-    "lhs": "{i}{_{N}}",
-    "network": "macroscopic",
-    "rhs": "{1}{_{N}} \\, . \\, {i}{_{}}"
-  },
-  "198": {
-    "variable_ID": 187,
-    "lhs": "{i}{_{}}",
-    "network": "macroscopic",
-    "rhs": "Root\\left( {i}{_{N}}\\right)"
-  },
-  "199": {
-    "variable_ID": 192,
-    "lhs": "{c}{_{{N S}}}",
-    "network": "control",
-    "rhs": "{c}{_{{N S}}}"
-  },
-  "200": {
-    "variable_ID": 193,
-    "lhs": "{V}{_{N}}",
-    "network": "control",
-    "rhs": "{U^{e}}{_{N}}"
-  },
-  "201": {
-    "variable_ID": 194,
-    "lhs": "{I}{_{}}",
-    "network": "control",
-    "rhs": "{i}{_{}}"
-  },
-  "202": {
-    "variable_ID": 195,
-    "lhs": "{R}{_{N}}",
-    "network": "control",
-    "rhs": "{U^{e}}{_{N}} \\, . \\, \\left( {I}{_{}} \\right)^{-1}"
+    "rhs": "\\left( {c_{norm}}{_{N}} \\right)^{-1} \\, {\\odot} \\, {c}{_{{N S}}}"
   }
 }
