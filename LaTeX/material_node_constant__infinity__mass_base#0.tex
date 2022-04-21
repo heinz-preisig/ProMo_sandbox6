@@ -68,7 +68,7 @@
 \begin{document}
 
 
-\section*{Equation assignment sequence for variable $data$}
+\section*{Equation assignment sequence for variable $\theta$}
 
 
 
@@ -153,7 +153,7 @@
 36 &16 &113 &\begin{eq}{T}{_{N}} := \text{Instantiate}({T}{_{N}}, {\#}{_{}})\end{eq} & \\
 35 &42 &116 &\begin{eq}{n}{_{{N S}}} := \int_{ {t_o}{_{}} }^{ {t_e}{_{}} } \, {\dot{n}}{_{{N S}}} \enskip d\,{t}{_{}}  + {{n^o}}{_{{N S}}}\end{eq} & \\
 34 &18 &123 &\begin{eq}{H}{_{N}} := \int_{ {t_o}{_{}} }^{ {t_e}{_{}} } \, {\dot{H}}{_{N}} \enskip d\,{t}{_{}}  + {{H^o}}{_{N}}\end{eq} & \\
-33 &18 &122 &\begin{eq}{H}{_{N}} := {m}{_{N}} \, . \, \int_{ {T_{ref}}{_{N}} }^{ {T}{_{N}} } \, {c_{p}}{_{N}} \enskip d\,{T}{_{N}}\end{eq} & \\
+33 &18 &122 &\begin{eq}{H}{_{N}} := {m}{_{N}} \, . \, \int_{ {T_{ref}}{_{N}} }^{ {T}{_{N}} } \, {cp}{_{N}} \enskip d\,{T}{_{N}}\end{eq} & \\
 32 &18 &9 &\begin{eq}{H}{_{N}} := {U}{_{N}}  - {p}{_{N}} \, . \, {V}{_{N}}\end{eq} & \\
 31 &56 &43 &\begin{eq}{k^d_z}{_{{N S}}} := \left( {\mu}{_{{N S}}} \right)^{-1} \, . \, \left({v_z}{_{N}} \, {\odot} \, \left(\left( {V}{_{N}} \right)^{-1} \, {\odot} \, \ParDiff{{U}{_{N}}}{{\mu}{_{{N S}}}}\right)\right)\end{eq} & \\
 30 &55 &138 &\begin{eq}{k^d_y}{_{{N S}}} := \text{Instantiate}({k^d_y}{_{{N S}}}, {\#}{_{}})\end{eq} & \\
@@ -182,11 +182,11 @@
 7 &53 &40 &\begin{eq}{k^c}{_{N}} := \text{Stack}\left( {k^c_x}{_{N}},{k^c_y}{_{N}},{k^c_z}{_{N}} \right)\end{eq} & \\
 6 &37 &25 &\begin{eq}{k^q}{_{N}} := \text{Stack}\left( {k^q_x}{_{N}},{k^q_y}{_{N}},{k^q_z}{_{N}} \right)\end{eq} & \\
 5 &29 &142 &\begin{eq}{\lambda}{_{S}} := \text{Instantiate}({\lambda}{_{S}}, {\#}{_{}})\end{eq} & \\
-4 &149 &141 &\begin{eq}{c_{v}}{_{N}} := \text{Instantiate}({c_{v}}{_{N}}, {\#}{_{}})\end{eq} & \\
-3 &149 &121 &\begin{eq}{c_{v}}{_{N}} := {C_v}{_{N}} \, . \, \left( {m}{_{N}} \right)^{-1}\end{eq} & \\
-2 &148 &140 &\begin{eq}{c_{p}}{_{N}} := \text{Instantiate}({c_{p}}{_{N}}, {\#}{_{}})\end{eq} & \\
-1 &148 &120 &\begin{eq}{c_{p}}{_{N}} := {C_p}{_{N}} \, . \, \left( {m}{_{N}} \right)^{-1}\end{eq} & \\
-0 &154 &143 &\begin{eq}{data}{_{}} := \text{MixedStack}\left( {k^q}{_{N}},{k^c}{_{N}},{k^d}{_{{N S}}},{h}{_{{N S}}},{c_{p}}{_{N}},{c_{v}}{_{N}},{\lambda}{_{S}},{\rho}{_{N}} \right)\end{eq} & \\
+4 &149 &141 &\begin{eq}{cv}{_{N}} := \text{Instantiate}({cv}{_{N}}, {\#}{_{}})\end{eq} & \\
+3 &149 &121 &\begin{eq}{cv}{_{N}} := {C_v}{_{N}} \, . \, \left( {m}{_{N}} \right)^{-1}\end{eq} & \\
+2 &148 &140 &\begin{eq}{cp}{_{N}} := \text{Instantiate}({cp}{_{N}}, {\#}{_{}})\end{eq} & \\
+1 &148 &120 &\begin{eq}{cp}{_{N}} := {C_p}{_{N}} \, . \, \left( {m}{_{N}} \right)^{-1}\end{eq} & \\
+0 &154 &143 &\begin{eq}{\theta}{_{}} := \text{MixedStack}\left( {k^q}{_{N}},{k^c}{_{N}},{k^d}{_{{N S}}},{h}{_{{N S}}},{cp}{_{N}},{cv}{_{N}},{\lambda}{_{S}},{\rho}{_{N}} \right)\end{eq} & \\
 
 \end{longtable}
 

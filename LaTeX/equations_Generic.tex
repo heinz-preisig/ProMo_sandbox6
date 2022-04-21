@@ -452,21 +452,61 @@ no & equation &documentation &layer \\\hline\hline
     \begin{eq}{\xi}{_{{N S}}} := \left( {c_{norm}}{_{N}} \right)^{-1} \, {\odot} \, {c}{_{{N S}}}\end{eq} &
     \begin{lay}mole fractions \end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:171"}{ 166 }\hypertarget{"e:166"}{  } &
-    \begin{eq}{ElecPotential}{_{N}} := \left( {U}{_{N}} \right)^{-1} \, . \, {Charge}{_{}}\end{eq} &
-    \begin{lay}electrical potential in volts\end{lay} &
+\hyperlink{"v:175"}{ 171 }\hypertarget{"e:171"}{  } &
+    \begin{eq}{\xi}{_{N}} := \text{Instantiate}({\xi}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}active additive fraction\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:179"}{ 176 }\hypertarget{"e:176"}{  } &
+    \begin{eq}{Ue}{_{N}} := \left( {C}{_{}} \right)^{-1} \, . \, {U}{_{N}}\end{eq} &
+    \begin{lay}electrical potential\end{lay} &
     \begin{lay}physical\end{lay} \\
-\hyperlink{"v:172"}{ 167 }\hypertarget{"e:167"}{  } &
-    \begin{eq}{current}{_{}} := \TotDiff{{Charge}{_{}}}{{t}{_{}}}\end{eq} &
+\hyperlink{"v:180"}{ 177 }\hypertarget{"e:177"}{  } &
+    \begin{eq}{i}{_{}} := \TotDiff{{C}{_{}}}{{t}{_{}}}\end{eq} &
     \begin{lay}electrical current\end{lay} &
     \begin{lay}macroscopic\end{lay} \\
-\hyperlink{"v:173"}{ 168 }\hypertarget{"e:168"}{  } &
-    \begin{eq}{elecResistance}{_{N}} := \left( {ElecPotential}{_{N}} \right)^{-1} \, . \, {current}{_{}}\end{eq} &
-    \begin{lay}electrical resistance\end{lay} &
+\hyperlink{"v:181"}{ 178 }\hypertarget{"e:178"}{  } &
+    \begin{eq}{R^{e}}{_{N}} := \left( {i}{_{}} \right)^{-1} \, . \, {Ue}{_{N}}\end{eq} &
+    \begin{lay}electrical conductivity\end{lay} &
     \begin{lay}material\end{lay} \\
-\hyperlink{"v:176"}{ 169 }\hypertarget{"e:169"}{  } &
-    \begin{eq}{elecConductivityFrac}{_{N}} := \left( {elecResistance}{_{N}} \right)^{-1} \, . \, {additiveFraction}{_{N}}\end{eq} &
-    \begin{lay}electrical conductivity as function of additive\end{lay} &
+\hyperlink{"v:182"}{ 179 }\hypertarget{"e:179"}{  } &
+    \begin{eq}{k^{e,\xi}}{_{N}} := \left( {R^{e}}{_{N}} \right)^{-1} \, . \, {\xi}{_{N}}\end{eq} &
+    \begin{lay}electrical conductivity of electrolyte simple model\end{lay} &
     \begin{lay}material\end{lay} \\
+\hyperlink{"v:181"}{ 180 }\hypertarget{"e:180"}{  } &
+    \begin{eq}{R^{e}}{_{N}} := \text{Instantiate}({R^{e}}{_{N}}, {\#}{_{}})\end{eq} &
+    \begin{lay}electrical conductivity\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:179"}{ 181 }\hypertarget{"e:181"}{  } &
+    \begin{eq}{Ue}{_{N}} := \left( {k^{e,\xi}}{_{N}} \right)^{-1} \, . \, {i}{_{}}\end{eq} &
+    \begin{lay}electrical potential\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:183"}{ 182 }\hypertarget{"e:182"}{  } &
+    \begin{eq}{{\dot{U}^{e}}}{_{N}} := {1}{_{N}} \, . \, {Ue}{_{N}}\end{eq} &
+    \begin{lay}Kirkhoff first law\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:183"}{ 183 }\hypertarget{"e:183"}{  } &
+    \begin{eq}{{\dot{U}^{e}}}{_{N}} := \text{Instantiate}({{\dot{U}^{e}}}{_{N}}, {0}{_{}})\end{eq} &
+    \begin{lay}Kirkhoff first law\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:180"}{ 185 }\hypertarget{"e:185"}{  } &
+    \begin{eq}{i}{_{}} := Root\left( {{\dot{U}^{e}}}{_{N}}\right)\end{eq} &
+    \begin{lay}electrical current\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:185"}{ 186 }\hypertarget{"e:186"}{  } &
+    \begin{eq}{i}{_{A}} := {1}{_{A}} \, . \, {i}{_{}}\end{eq} &
+    \begin{lay}current in arcs is the same in the circuit\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:186"}{ 187 }\hypertarget{"e:187"}{  } &
+    \begin{eq}{k^{e}}{_{N}} := \left( {R^{e}}{_{N}} \right)^{-1}\end{eq} &
+    \begin{lay}electrical conductivity\end{lay} &
+    \begin{lay}material\end{lay} \\
+\hyperlink{"v:179"}{ 188 }\hypertarget{"e:188"}{  } &
+    \begin{eq}{Ue}{_{N}} := {R^{e}}{_{N}} \, . \, {i}{_{}}\end{eq} &
+    \begin{lay}electrical potential\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:180"}{ 189 }\hypertarget{"e:189"}{  } &
+    \begin{eq}{i}{_{}} := Root\left( {Ue}{_{N}}\right)\end{eq} &
+    \begin{lay}electrical current\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
 \hline
 \end{longtable}

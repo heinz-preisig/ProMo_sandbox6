@@ -1,0 +1,208 @@
+{
+  "nodes": {
+    "1": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "constant|infinity",
+      "tokens": {
+        "charge": []
+      },
+      "injected_typed_tokens": {},
+      "variant": "electrical source"
+    },
+    "2": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "constant|infinity",
+      "tokens": {
+        "charge": []
+      },
+      "injected_typed_tokens": {},
+      "variant": "electrical source"
+    },
+    "3": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "event|lumped",
+      "tokens": {
+        "charge": []
+      },
+      "conversions": {},
+      "variant": "A-meter"
+    },
+    "4": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "A-solid",
+      "class": "node_simple",
+      "type": "event|lumped",
+      "tokens": {
+        "charge": []
+      },
+      "conversions": {},
+      "variant": "electrolyte"
+    }
+  },
+  "arcs": {
+    "0": {
+      "name": "1 | 3",
+      "source": 1,
+      "sink": 3,
+      "token": "charge",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "conduction",
+      "nature": "lumped",
+      "variant": "current"
+    },
+    "1": {
+      "name": "3 | 4",
+      "source": 3,
+      "sink": 4,
+      "token": "charge",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "conduction",
+      "nature": "lumped",
+      "variant": "current"
+    },
+    "2": {
+      "name": "4 | 2",
+      "source": 4,
+      "sink": 2,
+      "token": "charge",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "A-solid",
+      "mechanism": "conduction",
+      "nature": "lumped",
+      "variant": "current"
+    }
+  },
+  "named_networks": {
+    "network__named_network": {
+      "control": [
+        "A-control"
+      ],
+      "gas": [
+        "A-gas"
+      ],
+      "liquid": [
+        "A-liquid"
+      ],
+      "material": [
+        "A-material"
+      ],
+      "reactions": [
+        "A-reactions"
+      ],
+      "solid": [
+        "A-solid"
+      ]
+    },
+    "A-control": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-gas": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-liquid": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-material": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-reactions": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    },
+    "A-solid": {
+      "colour": [
+        255,
+        255,
+        255,
+        100
+      ]
+    }
+  },
+  "token_domains": {
+    "charge": {
+      "0": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "energy": {},
+    "mass": {},
+    "signal": {}
+  },
+  "typed_token_domains": {
+    "charge": {
+      "0": {}
+    }
+  },
+  "token_incidence_matrix": {
+    "0": {
+      "charge": {
+        "1": [
+          0
+        ],
+        "3": [
+          0,
+          1
+        ],
+        "4": [
+          1,
+          2
+        ],
+        "2": [
+          2
+        ]
+      }
+    }
+  },
+  "typed_token_incidence_matrix": {
+    "charge": {
+      "0": {}
+    }
+  },
+  "typed_token_lists": {
+    "charge": {
+      "0": []
+    }
+  }
+}

@@ -659,28 +659,88 @@
     "network": "macroscopic",
     "rhs": "khatriRao(np.reciprocal(cnorm), [N], c, [N_x_S])"
   },
-  "166": {
-    "variable_ID": 171,
-    "lhs": "ElecPotential",
-    "network": "physical",
-    "rhs": "np.multiply(np.reciprocal(U), Charge)"
+  "171": {
+    "variable_ID": 175,
+    "lhs": "additiveFraction",
+    "network": "material",
+    "rhs": "np.ones(np.shape(additiveFraction)), value"
   },
-  "167": {
-    "variable_ID": 172,
+  "176": {
+    "variable_ID": 179,
+    "lhs": "Ue",
+    "network": "physical",
+    "rhs": "np.multiply(np.reciprocal(Charge), U)"
+  },
+  "177": {
+    "variable_ID": 180,
     "lhs": "current",
     "network": "macroscopic",
     "rhs": "TotalDiff(Charge, t)"
   },
-  "168": {
-    "variable_ID": 173,
-    "lhs": "elecResistance",
+  "178": {
+    "variable_ID": 181,
+    "lhs": "elResistance",
     "network": "material",
-    "rhs": "np.multiply(np.reciprocal(ElecPotential), current)"
+    "rhs": "np.multiply(np.reciprocal(current), Ue)"
   },
-  "169": {
-    "variable_ID": 176,
-    "lhs": "elecConductivityFrac",
+  "179": {
+    "variable_ID": 182,
+    "lhs": "elConducC",
     "network": "material",
-    "rhs": "np.multiply(np.reciprocal(elecResistance), additiveFraction)"
+    "rhs": "np.multiply(np.reciprocal(elResistance), additiveFraction)"
+  },
+  "180": {
+    "variable_ID": 181,
+    "lhs": "elResistance",
+    "network": "material",
+    "rhs": "np.ones(np.shape(elResistance)), value"
+  },
+  "181": {
+    "variable_ID": 179,
+    "lhs": "Ue",
+    "network": "macroscopic",
+    "rhs": "np.multiply(np.reciprocal(elConducC), current)"
+  },
+  "182": {
+    "variable_ID": 183,
+    "lhs": "dUedt",
+    "network": "macroscopic",
+    "rhs": "np.multiply(one_N, Ue)"
+  },
+  "183": {
+    "variable_ID": 183,
+    "lhs": "dUedt",
+    "network": "macroscopic",
+    "rhs": "np.ones(np.shape(dUedt)), zero"
+  },
+  "185": {
+    "variable_ID": 180,
+    "lhs": "current",
+    "network": "macroscopic",
+    "rhs": "Root(dUedt)"
+  },
+  "186": {
+    "variable_ID": 185,
+    "lhs": "courrentA",
+    "network": "macroscopic",
+    "rhs": "np.multiply(one_A, current)"
+  },
+  "187": {
+    "variable_ID": 186,
+    "lhs": "elConduc",
+    "network": "material",
+    "rhs": "np.reciprocal(elResistance)"
+  },
+  "188": {
+    "variable_ID": 179,
+    "lhs": "Ue",
+    "network": "macroscopic",
+    "rhs": "np.multiply(elResistance, current)"
+  },
+  "189": {
+    "variable_ID": 180,
+    "lhs": "current",
+    "network": "macroscopic",
+    "rhs": "Root(Ue)"
   }
 }

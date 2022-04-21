@@ -549,24 +549,74 @@
     "network": "macroscopic",
     "rhs": " inv ( cnorm ) : c"
   },
-  "166": {
-    "lhs": "ElecPotential",
-    "network": "physical",
-    "rhs": " inv ( U ) . Charge"
+  "171": {
+    "lhs": "additiveFraction",
+    "network": "material",
+    "rhs": " Instantiate ( additiveFraction , value )"
   },
-  "167": {
+  "176": {
+    "lhs": "Ue",
+    "network": "physical",
+    "rhs": " inv ( Charge ) . U"
+  },
+  "177": {
     "lhs": "current",
     "network": "macroscopic",
     "rhs": " TotalDiff ( Charge , t )"
   },
-  "168": {
-    "lhs": "elecResistance",
+  "178": {
+    "lhs": "elResistance",
     "network": "material",
-    "rhs": " inv ( ElecPotential ) . current"
+    "rhs": " inv ( current ) . Ue"
   },
-  "169": {
-    "lhs": "elecConductivityFrac",
+  "179": {
+    "lhs": "elConducC",
     "network": "material",
-    "rhs": " inv ( elecResistance ) . additiveFraction"
+    "rhs": " inv ( elResistance ) . additiveFraction"
+  },
+  "180": {
+    "lhs": "elResistance",
+    "network": "material",
+    "rhs": " Instantiate ( elResistance , value )"
+  },
+  "181": {
+    "lhs": "Ue",
+    "network": "macroscopic",
+    "rhs": " inv ( elConducC ) . current"
+  },
+  "182": {
+    "lhs": "dUedt",
+    "network": "macroscopic",
+    "rhs": " one_N . Ue"
+  },
+  "183": {
+    "lhs": "dUedt",
+    "network": "macroscopic",
+    "rhs": " Instantiate ( dUedt , zero )"
+  },
+  "185": {
+    "lhs": "current",
+    "network": "macroscopic",
+    "rhs": " Root ( dUedt )"
+  },
+  "186": {
+    "lhs": "courrentA",
+    "network": "macroscopic",
+    "rhs": " one_A . current"
+  },
+  "187": {
+    "lhs": "elConduc",
+    "network": "material",
+    "rhs": " inv ( elResistance )"
+  },
+  "188": {
+    "lhs": "Ue",
+    "network": "macroscopic",
+    "rhs": " elResistance . current"
+  },
+  "189": {
+    "lhs": "current",
+    "network": "macroscopic",
+    "rhs": " Root ( Ue )"
   }
 }

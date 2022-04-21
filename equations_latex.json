@@ -659,28 +659,88 @@
     "network": "macroscopic",
     "rhs": "\\left( {c_{norm}}{_{N}} \\right)^{-1} \\, {\\odot} \\, {c}{_{{N S}}}"
   },
-  "166": {
-    "variable_ID": 171,
-    "lhs": "{ElecPotential}{_{N}}",
+  "171": {
+    "variable_ID": 175,
+    "lhs": "{\\xi}{_{N}}",
+    "network": "material",
+    "rhs": "\\text{Instantiate}({\\xi}{_{N}}, {\\#}{_{}})"
+  },
+  "176": {
+    "variable_ID": 179,
+    "lhs": "{Ue}{_{N}}",
     "network": "physical",
-    "rhs": "\\left( {U}{_{N}} \\right)^{-1} \\, . \\, {Charge}{_{}}"
+    "rhs": "\\left( {C}{_{}} \\right)^{-1} \\, . \\, {U}{_{N}}"
   },
-  "167": {
-    "variable_ID": 172,
-    "lhs": "{current}{_{}}",
+  "177": {
+    "variable_ID": 180,
+    "lhs": "{i}{_{}}",
     "network": "macroscopic",
-    "rhs": "\\TotDiff{{Charge}{_{}}}{{t}{_{}}}"
+    "rhs": "\\TotDiff{{C}{_{}}}{{t}{_{}}}"
   },
-  "168": {
-    "variable_ID": 173,
-    "lhs": "{elecResistance}{_{N}}",
+  "178": {
+    "variable_ID": 181,
+    "lhs": "{R^{e}}{_{N}}",
     "network": "material",
-    "rhs": "\\left( {ElecPotential}{_{N}} \\right)^{-1} \\, . \\, {current}{_{}}"
+    "rhs": "\\left( {i}{_{}} \\right)^{-1} \\, . \\, {Ue}{_{N}}"
   },
-  "169": {
-    "variable_ID": 176,
-    "lhs": "{elecConductivityFrac}{_{N}}",
+  "179": {
+    "variable_ID": 182,
+    "lhs": "{k^{e,\\xi}}{_{N}}",
     "network": "material",
-    "rhs": "\\left( {elecResistance}{_{N}} \\right)^{-1} \\, . \\, {additiveFraction}{_{N}}"
+    "rhs": "\\left( {R^{e}}{_{N}} \\right)^{-1} \\, . \\, {\\xi}{_{N}}"
+  },
+  "180": {
+    "variable_ID": 181,
+    "lhs": "{R^{e}}{_{N}}",
+    "network": "material",
+    "rhs": "\\text{Instantiate}({R^{e}}{_{N}}, {\\#}{_{}})"
+  },
+  "181": {
+    "variable_ID": 179,
+    "lhs": "{Ue}{_{N}}",
+    "network": "macroscopic",
+    "rhs": "\\left( {k^{e,\\xi}}{_{N}} \\right)^{-1} \\, . \\, {i}{_{}}"
+  },
+  "182": {
+    "variable_ID": 183,
+    "lhs": "{{\\dot{U}^{e}}}{_{N}}",
+    "network": "macroscopic",
+    "rhs": "{1}{_{N}} \\, . \\, {Ue}{_{N}}"
+  },
+  "183": {
+    "variable_ID": 183,
+    "lhs": "{{\\dot{U}^{e}}}{_{N}}",
+    "network": "macroscopic",
+    "rhs": "\\text{Instantiate}({{\\dot{U}^{e}}}{_{N}}, {0}{_{}})"
+  },
+  "185": {
+    "variable_ID": 180,
+    "lhs": "{i}{_{}}",
+    "network": "macroscopic",
+    "rhs": "Root\\left( {{\\dot{U}^{e}}}{_{N}}\\right)"
+  },
+  "186": {
+    "variable_ID": 185,
+    "lhs": "{i}{_{A}}",
+    "network": "macroscopic",
+    "rhs": "{1}{_{A}} \\, . \\, {i}{_{}}"
+  },
+  "187": {
+    "variable_ID": 186,
+    "lhs": "{k^{e}}{_{N}}",
+    "network": "material",
+    "rhs": "\\left( {R^{e}}{_{N}} \\right)^{-1}"
+  },
+  "188": {
+    "variable_ID": 179,
+    "lhs": "{Ue}{_{N}}",
+    "network": "macroscopic",
+    "rhs": "{R^{e}}{_{N}} \\, . \\, {i}{_{}}"
+  },
+  "189": {
+    "variable_ID": 180,
+    "lhs": "{i}{_{}}",
+    "network": "macroscopic",
+    "rhs": "Root\\left( {Ue}{_{N}}\\right)"
   }
 }
