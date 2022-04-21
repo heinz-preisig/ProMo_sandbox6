@@ -742,5 +742,35 @@
     "lhs": "{i}{_{}}",
     "network": "macroscopic",
     "rhs": "Root\\left( {Ue}{_{N}}\\right)"
+  },
+  "190": {
+    "variable_ID": 187,
+    "lhs": "{I}{_{}}",
+    "network": "control",
+    "rhs": "{i}{_{}}"
+  },
+  "191": {
+    "variable_ID": 188,
+    "lhs": "{U}{_{N}}",
+    "network": "control",
+    "rhs": "{Ue}{_{N}}"
+  },
+  "192": {
+    "variable_ID": 189,
+    "lhs": "{a}{_{N}}",
+    "network": "control",
+    "rhs": "{\\xi}{_{N}}"
+  },
+  "193": {
+    "variable_ID": 190,
+    "lhs": "{R}{_{N}}",
+    "network": "control",
+    "rhs": "\\left( {I}{_{}} \\right)^{-1} \\, . \\, {U}{_{N}}"
+  },
+  "194": {
+    "variable_ID": 191,
+    "lhs": "{store}{_{}}",
+    "network": "control",
+    "rhs": "\\text{MixedStack}\\left( {I}{_{}},{U}{_{N}},{R}{_{N}},{a}{_{N}} \\right)"
   }
 }

@@ -618,5 +618,30 @@
     "lhs": "current",
     "network": "macroscopic",
     "rhs": " Root ( Ue )"
+  },
+  "190": {
+    "lhs": "measuredCurrent",
+    "network": "control",
+    "rhs": " current"
+  },
+  "191": {
+    "lhs": "measuredPotentialDiff",
+    "network": "control",
+    "rhs": " Ue"
+  },
+  "192": {
+    "lhs": "measuredAdditive",
+    "network": "control",
+    "rhs": " additiveFraction"
+  },
+  "193": {
+    "lhs": "compResistance",
+    "network": "control",
+    "rhs": " inv ( measuredCurrent ) . measuredPotentialDiff"
+  },
+  "194": {
+    "lhs": "store",
+    "network": "control",
+    "rhs": " MixedStack ( measuredCurrent , measuredPotentialDiff , compResistance , measuredAdditive )"
   }
 }

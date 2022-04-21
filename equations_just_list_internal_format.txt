@@ -122,3 +122,8 @@
 187 :: elConduc =  inv ( elResistance )
 188 :: Ue =  elResistance . current
 189 :: current =  Root ( Ue )
+190 :: measuredCurrent =  current
+191 :: measuredPotentialDiff =  Ue
+192 :: measuredAdditive =  additiveFraction
+193 :: compResistance =  inv ( measuredCurrent ) . measuredPotentialDiff
+194 :: store =  MixedStack ( measuredCurrent , measuredPotentialDiff , compResistance , measuredAdditive )

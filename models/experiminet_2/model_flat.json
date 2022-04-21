@@ -10,7 +10,8 @@
         "charge": []
       },
       "injected_typed_tokens": {},
-      "variant": "electrical source"
+      "variant": "electrical source",
+      "charge": []
     },
     "2": {
       "name": "default",
@@ -22,7 +23,8 @@
         "charge": []
       },
       "injected_typed_tokens": {},
-      "variant": "electrical source"
+      "variant": "electrical source",
+      "charge": []
     },
     "3": {
       "name": "default",
@@ -34,7 +36,8 @@
         "charge": []
       },
       "conversions": {},
-      "variant": "A-meter"
+      "variant": "A-meter",
+      "charge": []
     },
     "4": {
       "name": "default",
@@ -46,7 +49,18 @@
         "charge": []
       },
       "conversions": {},
-      "variant": "electrolyte"
+      "variant": "electrolyte",
+      "charge": []
+    },
+    "5": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "constant|AE",
+      "tokens": {},
+      "injected_typed_tokens": {},
+      "variant": "gugus"
     }
   },
   "arcs": {

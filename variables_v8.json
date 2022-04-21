@@ -1512,6 +1512,66 @@
       "tokens": "[]",
       "type": "property",
       "units": "[3, -2, 0, -1, 0, 2, 0, 0]"
+    },
+    "187": {
+      "aliases": "{'global_ID': ' V_187', 'python': 'measuredCurrent', 'cpp': 'measuredCurrent', 'matlab': 'measuredCurrent', 'latex': 'I', 'internal_code': 'measuredCurrent'}",
+      "doc": "measured current",
+      "equations": "{190: {'rhs': ' V_180', 'type': 'generic', 'doc': 'measured current', 'network': 'control', 'incidence_list': ['180']}}",
+      "index_structures": "[]",
+      "label": "measuredCurrent",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "algebraic",
+      "units": "[0, 0, 0, 0, 0, 1, 0, 0]"
+    },
+    "188": {
+      "aliases": "{'global_ID': ' V_188', 'python': 'measuredPotentialDiff', 'cpp': 'measuredPotentialDiff', 'matlab': 'measuredPotentialDiff', 'latex': 'U', 'internal_code': 'measuredPotentialDiff'}",
+      "doc": "measured potential differences",
+      "equations": "{191: {'rhs': ' V_179', 'type': 'generic', 'doc': 'measured potential differences', 'network': 'control', 'incidence_list': ['179']}}",
+      "index_structures": "[1]",
+      "label": "measuredPotentialDiff",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "algebraic",
+      "units": "[-3, 2, 0, 1, 0, -1, 0, 0]"
+    },
+    "189": {
+      "aliases": "{'global_ID': ' V_189', 'python': 'measuredAdditive', 'cpp': 'measuredAdditive', 'matlab': 'measuredAdditive', 'latex': 'a', 'internal_code': 'measuredAdditive'}",
+      "doc": "",
+      "equations": "{192: {'rhs': ' V_175', 'type': 'generic', 'doc': 'var doc : ', 'network': 'control', 'incidence_list': ['175']}}",
+      "index_structures": "[1]",
+      "label": "measuredAdditive",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "algebraic",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "190": {
+      "aliases": "{'global_ID': ' V_190', 'python': 'compResistance', 'cpp': 'compResistance', 'matlab': 'compResistance', 'latex': 'R', 'internal_code': 'compResistance'}",
+      "doc": "computed potential difference",
+      "equations": "{193: {'rhs': ' F_15 D_0 V_187 D_1 O_4 V_188', 'type': 'generic', 'doc': 'computed potential difference', 'network': 'control', 'incidence_list': ['187', '188']}}",
+      "index_structures": "[1]",
+      "label": "compResistance",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "algebraic",
+      "units": "[-3, 2, 0, 1, 0, -2, 0, 0]"
+    },
+    "191": {
+      "aliases": "{'global_ID': ' V_191', 'python': 'store', 'cpp': 'store', 'matlab': 'store', 'latex': 'store', 'internal_code': 'store'}",
+      "doc": "",
+      "equations": "{194: {'rhs': ' F_19 D_0 V_187 D_7 V_188 D_7 V_190 D_7 V_189 D_1', 'type': 'generic', 'doc': 'var doc : ', 'network': 'control', 'incidence_list': ['187', '188', '189', '190']}}",
+      "index_structures": "[]",
+      "label": "store",
+      "network": "control",
+      "port_variable": "False",
+      "tokens": "[]",
+      "type": "algebraic",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
     }
   },
   "indices": {
@@ -1821,7 +1881,7 @@
     }
   },
   "Ontology_global_IDs": {
-    "variable": 186,
-    "equation": 189
+    "variable": 191,
+    "equation": 194
   }
 }

@@ -6,7 +6,8 @@
         1,
         2,
         3,
-        4
+        4,
+        5
       ]
     },
     "1": {
@@ -28,6 +29,12 @@
       "children": []
     },
     "4": {
+      "ancestors": [
+        0
+      ],
+      "children": []
+    },
+    "5": {
       "ancestors": [
         0
       ],
@@ -110,7 +117,8 @@
       "network": null,
       "named_network": null,
       "class": "node_composite",
-      "type": "node_composite"
+      "type": "node_composite",
+      "variant": null
     },
     "1": {
       "name": "default",
@@ -122,7 +130,8 @@
         "charge": []
       },
       "injected_typed_tokens": {},
-      "variant": "electrical source"
+      "variant": "electrical source",
+      "charge": []
     },
     "2": {
       "name": "default",
@@ -134,7 +143,8 @@
         "charge": []
       },
       "injected_typed_tokens": {},
-      "variant": "electrical source"
+      "variant": "electrical source",
+      "charge": []
     },
     "3": {
       "name": "default",
@@ -146,7 +156,8 @@
         "charge": []
       },
       "conversions": {},
-      "variant": "A-meter"
+      "variant": "A-meter",
+      "charge": []
     },
     "4": {
       "name": "default",
@@ -158,7 +169,18 @@
         "charge": []
       },
       "conversions": {},
-      "variant": "electrolyte"
+      "variant": "electrolyte",
+      "charge": []
+    },
+    "5": {
+      "name": "default",
+      "network": "control",
+      "named_network": "A-control",
+      "class": "node_simple",
+      "type": "constant|AE",
+      "tokens": {},
+      "injected_typed_tokens": {},
+      "variant": "gugus"
     }
   },
   "domains": {},
@@ -282,6 +304,26 @@
             "position_x": -20,
             "position_y": 0
           }
+        },
+        "5": {
+          "position_x": -181.0,
+          "position_y": 119.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": -15,
+            "position_y": 0
+          },
+          "named_network": {
+            "position_x": -20,
+            "position_y": 0
+          }
         }
       },
       "arcs": {
@@ -330,6 +372,10 @@
         "1": [],
         "2": []
       }
+    },
+    "5": {
+      "nodes": {},
+      "arcs": {}
     }
   }
 }
