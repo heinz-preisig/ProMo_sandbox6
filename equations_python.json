@@ -772,5 +772,11 @@
     "lhs": "store",
     "network": "control",
     "rhs": "MixedStack(measuredCurrent,measuredPotentialDiff,compResistance,measuredAdditive)"
+  },
+  "195": {
+    "variable_ID": 179,
+    "lhs": "Ue",
+    "network": "macroscopic",
+    "rhs": "np.ones(np.shape(Ue)), value"
   }
 }

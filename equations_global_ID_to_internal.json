@@ -643,5 +643,10 @@
     "lhs": "store",
     "network": "control",
     "rhs": " MixedStack ( measuredCurrent , measuredPotentialDiff , compResistance , measuredAdditive )"
+  },
+  "195": {
+    "lhs": "Ue",
+    "network": "macroscopic",
+    "rhs": " Instantiate ( Ue , value )"
   }
 }

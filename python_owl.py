@@ -4201,6 +4201,13 @@ F_ID = "F_188"
 F_188 = onto.function( F_ID )
 F_188.is_function_of = incidence_list
 V_179.has_function.append( F_188 )
+incidence_list = []
+incidence_list.append( V_179 )
+incidence_list.append( V_1 )
+F_ID = "F_195"
+F_195 = onto.function( F_ID )
+F_195.is_function_of = incidence_list
+V_179.has_function.append( F_195 )
 #180
 
 V_180.has_function = []

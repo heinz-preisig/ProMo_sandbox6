@@ -772,5 +772,11 @@
     "lhs": "{store}{_{}}",
     "network": "control",
     "rhs": "\\text{MixedStack}\\left( {I}{_{}},{U}{_{N}},{R}{_{N}},{a}{_{N}} \\right)"
+  },
+  "195": {
+    "variable_ID": 179,
+    "lhs": "{Ue}{_{N}}",
+    "network": "macroscopic",
+    "rhs": "\\text{Instantiate}({Ue}{_{N}}, {\\#}{_{}})"
   }
 }

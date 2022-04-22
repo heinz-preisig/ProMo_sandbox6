@@ -127,3 +127,4 @@
 192 :: measuredAdditive =  additiveFraction
 193 :: compResistance =  inv ( measuredCurrent ) . measuredPotentialDiff
 194 :: store =  MixedStack ( measuredCurrent , measuredPotentialDiff , compResistance , measuredAdditive )
+195 :: Ue =  Instantiate ( Ue , value )
